@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
-**🔗 [Live Demo](https://your-app-name.streamlit.app)**  &nbsp;·&nbsp; [Report a Bug](../../issues) &nbsp;·&nbsp; [Request a Feature](../../issues)
+**🔗 [Live Demo](https://quizora.streamlit.app/)**  &nbsp;·&nbsp; [Report a Bug](../../issues) &nbsp;·&nbsp; [Request a Feature](../../issues)
 
 </div>
 
@@ -39,13 +39,14 @@ Upload a chapter, set your difficulty mix, and get a quiz in the time it takes t
 
 ## 🖥️ Live Demo
 
-Try it now: **[quizora.streamlit.app](https://your-app-name.streamlit.app)**
+Try it now: **[quizora.streamlit.app](https://quizora.streamlit.app/)**
 
 > No installation needed — upload a PDF and generate a quiz directly in your browser.
 
 ## 🛠️ Tech Stack
 
 - **[Streamlit](https://streamlit.io/)** — interactive web UI
+- **[LlamaIndex](https://www.llamaindex.ai/)** — PDF parsing, indexing, and retrieval that grounds each generated question in the source material
 - **`pipeline.py`** — PDF ingestion & AI-driven quiz generation
 - **`pdf_generator.py`** — question paper & answer key PDF export
 
