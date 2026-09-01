@@ -1,0 +1,29 @@
+{
+    "topics": [
+        {
+            "name": "Decision Tree",
+            "description": "A supervised learning model that splits data by selecting questions that best separate classes, illustrated with worked examples and applications.",
+            "importance": "high"
+        },
+        {
+            "name": "Random Forest",
+            "description": "An ensemble of many decision trees trained on random data subsets, using majority voting; covered with mechanics, calculations, and trade‑offs.",
+            "importance": "high"
+        },
+        {
+            "name": "K-Means Clustering",
+            "description": "An unsupervised learning algorithm that groups similar data points by iteratively moving toward centroids; explained with examples and real‑world uses.",
+            "importance": "high"
+        },
+        {
+            "name": "Supervised vs Unsupervised Learning",
+            "description": "The overarching framework distinguishing models that require labeled data (Decision Tree, Random Forest) from those that do not (K-Means).",
+            "importance": "medium"
+        },
+        {
+            "name": "Hands‑On Walkthrough (Model Mechanics, Worked Calculations, Applications, Trade‑offs)",
+            "description": "Practical section that walks through the mathematics, implementation steps, real‑world applications, and pros/cons of the three models.",
+            "importance": "medium"
+        }
+    ]
+}

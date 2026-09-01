@@ -1,0 +1,16 @@
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    container_name: quizora-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: quizora123
+      POSTGRES_DB: quizora
+    ports:
+      - "5433:5432"
+    volumes:
+      - quizora_data:/var/lib/postgresql
+
+volumes:
+  quizora_data:

@@ -1,0 +1,950 @@
+{
+    "total_questions": 7,
+    "questions": [
+        {
+            "question_id": 1,
+            "topic": "HTML5 Canvas Shape Drawing",
+            "difficulty": "easy",
+            "sources": [
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nP r a c t i c a l  : 1  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 1</title>  \n</head>  \n<body>  \n<h2>Canvas Shapes</h2>  \n<canvas id=\"c1\" width=\"600\" height=\"400\" style=\"border:1px solid black;\"></canvas>\n<script>  \nvar canvas = document.getElementById(\"c1\");  \nvar ctx = canvas.getContext(\"2d\");  \n// line  \nctx.beginPath();  \nctx.moveTo(20, 20);  \nctx.lineTo(150, 20);  \nctx.stroke();  \n// rectangle  \nctx.strokeRect(20, 40, 100, 60);  \n// square (filled)  \nctx.fillStyle = \"green\";  \nctx.fillRect(150, 40, 60, 60);  \n// circle  \nctx.beginPath();  \nctx.arc(280, 70, 40, 0, 2 * Math.PI);  \nctx.strokeStyle = \"red\";  \nctx.stroke();  \nAim: Develop Square, Rectangle, Line, Circle, Text, Linear & Circular gradient, Image in canvas, Arc\ngraphical shapes using HTML 5 canvas and HTML5 SVG.",
+                    "score": 0.751131318543295,
+                    "metadata": {
+                        "page_label": "1",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nP r a c t i c a l  : 1  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 1</title>  \n</head>  \n<body>  \n<h2>Canvas Shapes</h2>  \n<canvas id=\"c1\" width=\"600\" height=\"400\" style=\"border:1px solid black;\"></canvas>\n<script>  \nvar canvas = document.getElementById(\"c1\");  \nvar ctx = canvas.getContext(\"2d\");  \n// line  \nctx.beginPath();  \nctx.moveTo(20, 20);  \nctx.lineTo(150, 20);  \nctx.stroke();  \n// rectangle  \nctx.strokeRect(20, 40, 100, 60);  \n// square (filled)  \nctx.fillStyle = \"green\";  \nctx.fillRect(150, 40, 60, 60);  \n// circle  \nctx.beginPath();  \nctx.arc(280, 70, 40, 0, 2 * Math.PI);  \nctx.strokeStyle = \"red\";  \nctx.stroke();  \nAim: Develop Square, Rectangle, Line, Circle, Text, Linear & Circular gradient, Image in canvas, Arc\ngraphical shapes using HTML 5 canvas and HTML5 SVG.",
+                    "score": 0.751131318543295,
+                    "metadata": {
+                        "page_label": "1",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nP r a c t i c a l  : 1  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 1</title>  \n</head>  \n<body>  \n<h2>Canvas Shapes</h2>  \n<canvas id=\"c1\" width=\"600\" height=\"400\" style=\"border:1px solid black;\"></canvas>\n<script>  \nvar canvas = document.getElementById(\"c1\");  \nvar ctx = canvas.getContext(\"2d\");  \n// line  \nctx.beginPath();  \nctx.moveTo(20, 20);  \nctx.lineTo(150, 20);  \nctx.stroke();  \n// rectangle  \nctx.strokeRect(20, 40, 100, 60);  \n// square (filled)  \nctx.fillStyle = \"green\";  \nctx.fillRect(150, 40, 60, 60);  \n// circle  \nctx.beginPath();  \nctx.arc(280, 70, 40, 0, 2 * Math.PI);  \nctx.strokeStyle = \"red\";  \nctx.stroke();  \nAim: Develop Square, Rectangle, Line, Circle, Text, Linear & Circular gradient, Image in canvas, Arc\ngraphical shapes using HTML 5 canvas and HTML5 SVG.",
+                    "score": 0.751131318543295,
+                    "metadata": {
+                        "page_label": "1",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "// arc  \nctx.beginPath();  \nctx.arc(400, 70, 40, 0, Math.PI);  \nctx.strokeStyle = \"purple\";  \nctx.stroke();  \n// text  \nctx.font = \"20px Arial\";  \nctx.fillStyle = \"black\";  \nctx.fillText(\"Hello Canvas\", 470, 75);  \n// linear gradient  \nvar lg = ctx.createLinearGradient(20, 150, 220, 150);\nlg.addColorStop(0, \"yellow\");  \nlg.addColorStop(1, \"orange\");  \nctx.fillStyle = lg;  \nctx.fillRect(20, 150, 200, 70);  \n// circular gradient  \nvar rg = ctx.createRadialGradient(330, 190, 10, 330, 190, 50);\nrg.addColorStop(0, \"white\");  \nrg.addColorStop(1, \"blue\");  \nctx.fillStyle = rg;  \nctx.beginPath();  \nctx.arc(330, 190, 50, 0, 2 * Math.PI);  \nctx.fill();  \n// image in canvas  \nvar img = new Image();  \nimg.src = \"sample.jpg\";  \nimg.onload = function() {  \nctx.drawImage(img, 450, 140, 100, 100);  \n};  \n</script>  \n<h2>SVG Shapes</h2>  \n<svg width=\"600\" height=\"300\" style=\"border:1px solid black;\">  \n<!-- line -->  \n<line x1=\"20\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"black\" />",
+                    "score": 0.7347054043587814,
+                    "metadata": {
+                        "page_label": "2",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "// arc  \nctx.beginPath();  \nctx.arc(400, 70, 40, 0, Math.PI);  \nctx.strokeStyle = \"purple\";  \nctx.stroke();  \n// text  \nctx.font = \"20px Arial\";  \nctx.fillStyle = \"black\";  \nctx.fillText(\"Hello Canvas\", 470, 75);  \n// linear gradient  \nvar lg = ctx.createLinearGradient(20, 150, 220, 150);\nlg.addColorStop(0, \"yellow\");  \nlg.addColorStop(1, \"orange\");  \nctx.fillStyle = lg;  \nctx.fillRect(20, 150, 200, 70);  \n// circular gradient  \nvar rg = ctx.createRadialGradient(330, 190, 10, 330, 190, 50);\nrg.addColorStop(0, \"white\");  \nrg.addColorStop(1, \"blue\");  \nctx.fillStyle = rg;  \nctx.beginPath();  \nctx.arc(330, 190, 50, 0, 2 * Math.PI);  \nctx.fill();  \n// image in canvas  \nvar img = new Image();  \nimg.src = \"sample.jpg\";  \nimg.onload = function() {  \nctx.drawImage(img, 450, 140, 100, 100);  \n};  \n</script>  \n<h2>SVG Shapes</h2>  \n<svg width=\"600\" height=\"300\" style=\"border:1px solid black;\">  \n<!-- line -->  \n<line x1=\"20\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"black\" />",
+                    "score": 0.7347054043587814,
+                    "metadata": {
+                        "page_label": "2",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "// arc  \nctx.beginPath();  \nctx.arc(400, 70, 40, 0, Math.PI);  \nctx.strokeStyle = \"purple\";  \nctx.stroke();  \n// text  \nctx.font = \"20px Arial\";  \nctx.fillStyle = \"black\";  \nctx.fillText(\"Hello Canvas\", 470, 75);  \n// linear gradient  \nvar lg = ctx.createLinearGradient(20, 150, 220, 150);\nlg.addColorStop(0, \"yellow\");  \nlg.addColorStop(1, \"orange\");  \nctx.fillStyle = lg;  \nctx.fillRect(20, 150, 200, 70);  \n// circular gradient  \nvar rg = ctx.createRadialGradient(330, 190, 10, 330, 190, 50);\nrg.addColorStop(0, \"white\");  \nrg.addColorStop(1, \"blue\");  \nctx.fillStyle = rg;  \nctx.beginPath();  \nctx.arc(330, 190, 50, 0, 2 * Math.PI);  \nctx.fill();  \n// image in canvas  \nvar img = new Image();  \nimg.src = \"sample.jpg\";  \nimg.onload = function() {  \nctx.drawImage(img, 450, 140, 100, 100);  \n};  \n</script>  \n<h2>SVG Shapes</h2>  \n<svg width=\"600\" height=\"300\" style=\"border:1px solid black;\">  \n<!-- line -->  \n<line x1=\"20\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"black\" />",
+                    "score": 0.7347054043587814,
+                    "metadata": {
+                        "page_label": "2",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7045446458187501,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 1,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7045446458187501,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        },
+        {
+            "question_id": 2,
+            "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+            "difficulty": "easy",
+            "sources": [
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7330122430927911,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7330122430927911,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7330122430927911,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "// XML data  \nvar xmlText = \"<items>\" +  \n\"<item><label>Raj</label><value>80</value></item>\" +\n\"<item><label>Amit</label><value>65</value></item>\" +\n\"<item><label>Neha</label><value>90</value></item>\" +  \n ctx.fillStyle = \"black\";  \nctx.fillText(labels[i], x, 265);\nctx.fillText(values[i], x + 15, 245 - barHeight);\nx = x + barWidth + gap;  \n}  \n}  \n// CSV data  \nvar csvText = \"Name,Marks\\nRaj,80\\nAmit,65\\nNeha,90\";\nvar csvLines = csvText.split(\"\\n\");  \nvar csvLabels = [];  \nvar csvValues = [];  \nfor (var i = 1; i < csvLines.length; i++) {  \nvar parts = csvLines[i].split(\",\");\ncsvLabels.push(parts[0]);\ncsvValues.push(Number(parts[1]));  \n}  \ndrawBarChart(\"csvCanvas\", csvLabels, csvValues);  \n// JSON data  \nVar jsonText='[{\"label\":\"Raj\",\"value\":80},{\"label\":\"Amit\",\"value\":65},  \n{\"label\":\"Neha\",\"value\":90}]';  \nvar jsonData = JSON.parse(jsonText);\nvar jsonLabels = [];  \nvar jsonValues = [];  \nfor (var i = 0; i < jsonData.length; i++) {  \njsonLabels.push(jsonData[i].label);\njsonValues.push(jsonData[i].value);  \n}  \ndrawBarChart(\"jsonCanvas\", jsonLabels, jsonValues);",
+                    "score": 0.7079694904061724,
+                    "metadata": {
+                        "page_label": "6",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "// XML data  \nvar xmlText = \"<items>\" +  \n\"<item><label>Raj</label><value>80</value></item>\" +\n\"<item><label>Amit</label><value>65</value></item>\" +\n\"<item><label>Neha</label><value>90</value></item>\" +  \n ctx.fillStyle = \"black\";  \nctx.fillText(labels[i], x, 265);\nctx.fillText(values[i], x + 15, 245 - barHeight);\nx = x + barWidth + gap;  \n}  \n}  \n// CSV data  \nvar csvText = \"Name,Marks\\nRaj,80\\nAmit,65\\nNeha,90\";\nvar csvLines = csvText.split(\"\\n\");  \nvar csvLabels = [];  \nvar csvValues = [];  \nfor (var i = 1; i < csvLines.length; i++) {  \nvar parts = csvLines[i].split(\",\");\ncsvLabels.push(parts[0]);\ncsvValues.push(Number(parts[1]));  \n}  \ndrawBarChart(\"csvCanvas\", csvLabels, csvValues);  \n// JSON data  \nVar jsonText='[{\"label\":\"Raj\",\"value\":80},{\"label\":\"Amit\",\"value\":65},  \n{\"label\":\"Neha\",\"value\":90}]';  \nvar jsonData = JSON.parse(jsonText);\nvar jsonLabels = [];  \nvar jsonValues = [];  \nfor (var i = 0; i < jsonData.length; i++) {  \njsonLabels.push(jsonData[i].label);\njsonValues.push(jsonData[i].value);  \n}  \ndrawBarChart(\"jsonCanvas\", jsonLabels, jsonValues);",
+                    "score": 0.7079694904061724,
+                    "metadata": {
+                        "page_label": "6",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "// XML data  \nvar xmlText = \"<items>\" +  \n\"<item><label>Raj</label><value>80</value></item>\" +\n\"<item><label>Amit</label><value>65</value></item>\" +\n\"<item><label>Neha</label><value>90</value></item>\" +  \n ctx.fillStyle = \"black\";  \nctx.fillText(labels[i], x, 265);\nctx.fillText(values[i], x + 15, 245 - barHeight);\nx = x + barWidth + gap;  \n}  \n}  \n// CSV data  \nvar csvText = \"Name,Marks\\nRaj,80\\nAmit,65\\nNeha,90\";\nvar csvLines = csvText.split(\"\\n\");  \nvar csvLabels = [];  \nvar csvValues = [];  \nfor (var i = 1; i < csvLines.length; i++) {  \nvar parts = csvLines[i].split(\",\");\ncsvLabels.push(parts[0]);\ncsvValues.push(Number(parts[1]));  \n}  \ndrawBarChart(\"csvCanvas\", csvLabels, csvValues);  \n// JSON data  \nVar jsonText='[{\"label\":\"Raj\",\"value\":80},{\"label\":\"Amit\",\"value\":65},  \n{\"label\":\"Neha\",\"value\":90}]';  \nvar jsonData = JSON.parse(jsonText);\nvar jsonLabels = [];  \nvar jsonValues = [];  \nfor (var i = 0; i < jsonData.length; i++) {  \njsonLabels.push(jsonData[i].label);\njsonValues.push(jsonData[i].value);  \n}  \ndrawBarChart(\"jsonCanvas\", jsonLabels, jsonValues);",
+                    "score": 0.7079694904061724,
+                    "metadata": {
+                        "page_label": "6",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Develop Following Program Using HTML5 and D3.js  \n• Showing the data as a column chart (simple)  \n• Showing the data as a stacked column chart  \n• Showing the data as a Line chart (single, fewer and multiple lines)\n• Showing the data as a Pie Chart (single and multiple pie)  \n• Showing the data as a Bar Chart (Simple and multiple)  \nP r a c t i c a l  :  6  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 6</title>  \n<script src=\"https://d3js.org/d3.v7.min.js\"></script>\n</head>  \n<body>  \n<h2>1. Simple Column Chart</h2>  \n<svg id=\"col1\" width=\"400\" height=\"300\"></svg>\n<h2>2. Stacked Column Chart</h2>  \n<svg id=\"col2\" width=\"400\" height=\"300\"></svg>\n<h2>3. Line Chart (Multiple Lines)</h2>  \n<svg id=\"line1\" width=\"400\" height=\"300\"></svg>\n<h2>4. Pie Chart (Single)</h2>  \n<svg id=\"pie1\" width=\"300\" height=\"300\"></svg>\n<h2>4b. Pie Chart (Multiple)</h2>  \n<svg id=\"pie2\" width=\"300\" height=\"300\"></svg>\n<svg id=\"pie3\" width=\"300\" height=\"300\"></svg>\n<h2>5. Bar Chart (Simple)</h2>  \n<svg id=\"bar1\" width=\"400\" height=\"300\"></svg>\n<script>  \n// 1. Simple Column Chart  \nvar data1 = [10, 25, 18, 30, 22];",
+                    "score": 0.7076959820895192,
+                    "metadata": {
+                        "page_label": "19",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 2,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "easy",
+                    "text": "D a t e :  \nAim: Develop Following Program Using HTML5 and D3.js  \n• Showing the data as a column chart (simple)  \n• Showing the data as a stacked column chart  \n• Showing the data as a Line chart (single, fewer and multiple lines)\n• Showing the data as a Pie Chart (single and multiple pie)  \n• Showing the data as a Bar Chart (Simple and multiple)  \nP r a c t i c a l  :  6  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 6</title>  \n<script src=\"https://d3js.org/d3.v7.min.js\"></script>\n</head>  \n<body>  \n<h2>1. Simple Column Chart</h2>  \n<svg id=\"col1\" width=\"400\" height=\"300\"></svg>\n<h2>2. Stacked Column Chart</h2>  \n<svg id=\"col2\" width=\"400\" height=\"300\"></svg>\n<h2>3. Line Chart (Multiple Lines)</h2>  \n<svg id=\"line1\" width=\"400\" height=\"300\"></svg>\n<h2>4. Pie Chart (Single)</h2>  \n<svg id=\"pie1\" width=\"300\" height=\"300\"></svg>\n<h2>4b. Pie Chart (Multiple)</h2>  \n<svg id=\"pie2\" width=\"300\" height=\"300\"></svg>\n<svg id=\"pie3\" width=\"300\" height=\"300\"></svg>\n<h2>5. Bar Chart (Simple)</h2>  \n<svg id=\"bar1\" width=\"400\" height=\"300\"></svg>\n<script>  \n// 1. Simple Column Chart  \nvar data1 = [10, 25, 18, 30, 22];",
+                    "score": 0.7076959820895192,
+                    "metadata": {
+                        "page_label": "19",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        },
+        {
+            "question_id": 3,
+            "topic": "Rubric‑Based Assessment",
+            "difficulty": "easy",
+            "sources": [
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:\nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6779372500143809,
+                    "metadata": {
+                        "page_label": "18",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:\nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6779372500143809,
+                    "metadata": {
+                        "page_label": "18",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:\nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6779372500143809,
+                    "metadata": {
+                        "page_label": "18",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1. W3Schools – JSON Introduction:  https://www.w3schools.com/js/js_json_intro.asp\n2. W3Schools – HTML Canvas :  https://www.w3schools.com/html/html5_canvas.asp  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6730139862920034,
+                    "metadata": {
+                        "page_label": "9",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1. W3Schools – JSON Introduction:  https://www.w3schools.com/js/js_json_intro.asp\n2. W3Schools – HTML Canvas :  https://www.w3schools.com/html/html5_canvas.asp  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6730139862920034,
+                    "metadata": {
+                        "page_label": "9",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1. W3Schools – JSON Introduction:  https://www.w3schools.com/js/js_json_intro.asp\n2. W3Schools – HTML Canvas :  https://www.w3schools.com/html/html5_canvas.asp  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6730139862920034,
+                    "metadata": {
+                        "page_label": "9",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1.  Seaborn Official Documentation:  https://seaborn.pydata.org/  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.671580910682683,
+                    "metadata": {
+                        "page_label": "15",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 3,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "easy",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1.  Seaborn Official Documentation:  https://seaborn.pydata.org/  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.671580910682683,
+                    "metadata": {
+                        "page_label": "15",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        },
+        {
+            "question_id": 4,
+            "topic": "HTML5 Canvas Shape Drawing",
+            "difficulty": "medium",
+            "sources": [
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nP r a c t i c a l  : 1  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 1</title>  \n</head>  \n<body>  \n<h2>Canvas Shapes</h2>  \n<canvas id=\"c1\" width=\"600\" height=\"400\" style=\"border:1px solid black;\"></canvas>\n<script>  \nvar canvas = document.getElementById(\"c1\");  \nvar ctx = canvas.getContext(\"2d\");  \n// line  \nctx.beginPath();  \nctx.moveTo(20, 20);  \nctx.lineTo(150, 20);  \nctx.stroke();  \n// rectangle  \nctx.strokeRect(20, 40, 100, 60);  \n// square (filled)  \nctx.fillStyle = \"green\";  \nctx.fillRect(150, 40, 60, 60);  \n// circle  \nctx.beginPath();  \nctx.arc(280, 70, 40, 0, 2 * Math.PI);  \nctx.strokeStyle = \"red\";  \nctx.stroke();  \nAim: Develop Square, Rectangle, Line, Circle, Text, Linear & Circular gradient, Image in canvas, Arc\ngraphical shapes using HTML 5 canvas and HTML5 SVG.",
+                    "score": 0.751131318543295,
+                    "metadata": {
+                        "page_label": "1",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nP r a c t i c a l  : 1  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 1</title>  \n</head>  \n<body>  \n<h2>Canvas Shapes</h2>  \n<canvas id=\"c1\" width=\"600\" height=\"400\" style=\"border:1px solid black;\"></canvas>\n<script>  \nvar canvas = document.getElementById(\"c1\");  \nvar ctx = canvas.getContext(\"2d\");  \n// line  \nctx.beginPath();  \nctx.moveTo(20, 20);  \nctx.lineTo(150, 20);  \nctx.stroke();  \n// rectangle  \nctx.strokeRect(20, 40, 100, 60);  \n// square (filled)  \nctx.fillStyle = \"green\";  \nctx.fillRect(150, 40, 60, 60);  \n// circle  \nctx.beginPath();  \nctx.arc(280, 70, 40, 0, 2 * Math.PI);  \nctx.strokeStyle = \"red\";  \nctx.stroke();  \nAim: Develop Square, Rectangle, Line, Circle, Text, Linear & Circular gradient, Image in canvas, Arc\ngraphical shapes using HTML 5 canvas and HTML5 SVG.",
+                    "score": 0.751131318543295,
+                    "metadata": {
+                        "page_label": "1",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nP r a c t i c a l  : 1  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 1</title>  \n</head>  \n<body>  \n<h2>Canvas Shapes</h2>  \n<canvas id=\"c1\" width=\"600\" height=\"400\" style=\"border:1px solid black;\"></canvas>\n<script>  \nvar canvas = document.getElementById(\"c1\");  \nvar ctx = canvas.getContext(\"2d\");  \n// line  \nctx.beginPath();  \nctx.moveTo(20, 20);  \nctx.lineTo(150, 20);  \nctx.stroke();  \n// rectangle  \nctx.strokeRect(20, 40, 100, 60);  \n// square (filled)  \nctx.fillStyle = \"green\";  \nctx.fillRect(150, 40, 60, 60);  \n// circle  \nctx.beginPath();  \nctx.arc(280, 70, 40, 0, 2 * Math.PI);  \nctx.strokeStyle = \"red\";  \nctx.stroke();  \nAim: Develop Square, Rectangle, Line, Circle, Text, Linear & Circular gradient, Image in canvas, Arc\ngraphical shapes using HTML 5 canvas and HTML5 SVG.",
+                    "score": 0.751131318543295,
+                    "metadata": {
+                        "page_label": "1",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "// arc  \nctx.beginPath();  \nctx.arc(400, 70, 40, 0, Math.PI);  \nctx.strokeStyle = \"purple\";  \nctx.stroke();  \n// text  \nctx.font = \"20px Arial\";  \nctx.fillStyle = \"black\";  \nctx.fillText(\"Hello Canvas\", 470, 75);  \n// linear gradient  \nvar lg = ctx.createLinearGradient(20, 150, 220, 150);\nlg.addColorStop(0, \"yellow\");  \nlg.addColorStop(1, \"orange\");  \nctx.fillStyle = lg;  \nctx.fillRect(20, 150, 200, 70);  \n// circular gradient  \nvar rg = ctx.createRadialGradient(330, 190, 10, 330, 190, 50);\nrg.addColorStop(0, \"white\");  \nrg.addColorStop(1, \"blue\");  \nctx.fillStyle = rg;  \nctx.beginPath();  \nctx.arc(330, 190, 50, 0, 2 * Math.PI);  \nctx.fill();  \n// image in canvas  \nvar img = new Image();  \nimg.src = \"sample.jpg\";  \nimg.onload = function() {  \nctx.drawImage(img, 450, 140, 100, 100);  \n};  \n</script>  \n<h2>SVG Shapes</h2>  \n<svg width=\"600\" height=\"300\" style=\"border:1px solid black;\">  \n<!-- line -->  \n<line x1=\"20\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"black\" />",
+                    "score": 0.7347054043587814,
+                    "metadata": {
+                        "page_label": "2",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "// arc  \nctx.beginPath();  \nctx.arc(400, 70, 40, 0, Math.PI);  \nctx.strokeStyle = \"purple\";  \nctx.stroke();  \n// text  \nctx.font = \"20px Arial\";  \nctx.fillStyle = \"black\";  \nctx.fillText(\"Hello Canvas\", 470, 75);  \n// linear gradient  \nvar lg = ctx.createLinearGradient(20, 150, 220, 150);\nlg.addColorStop(0, \"yellow\");  \nlg.addColorStop(1, \"orange\");  \nctx.fillStyle = lg;  \nctx.fillRect(20, 150, 200, 70);  \n// circular gradient  \nvar rg = ctx.createRadialGradient(330, 190, 10, 330, 190, 50);\nrg.addColorStop(0, \"white\");  \nrg.addColorStop(1, \"blue\");  \nctx.fillStyle = rg;  \nctx.beginPath();  \nctx.arc(330, 190, 50, 0, 2 * Math.PI);  \nctx.fill();  \n// image in canvas  \nvar img = new Image();  \nimg.src = \"sample.jpg\";  \nimg.onload = function() {  \nctx.drawImage(img, 450, 140, 100, 100);  \n};  \n</script>  \n<h2>SVG Shapes</h2>  \n<svg width=\"600\" height=\"300\" style=\"border:1px solid black;\">  \n<!-- line -->  \n<line x1=\"20\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"black\" />",
+                    "score": 0.7347054043587814,
+                    "metadata": {
+                        "page_label": "2",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "// arc  \nctx.beginPath();  \nctx.arc(400, 70, 40, 0, Math.PI);  \nctx.strokeStyle = \"purple\";  \nctx.stroke();  \n// text  \nctx.font = \"20px Arial\";  \nctx.fillStyle = \"black\";  \nctx.fillText(\"Hello Canvas\", 470, 75);  \n// linear gradient  \nvar lg = ctx.createLinearGradient(20, 150, 220, 150);\nlg.addColorStop(0, \"yellow\");  \nlg.addColorStop(1, \"orange\");  \nctx.fillStyle = lg;  \nctx.fillRect(20, 150, 200, 70);  \n// circular gradient  \nvar rg = ctx.createRadialGradient(330, 190, 10, 330, 190, 50);\nrg.addColorStop(0, \"white\");  \nrg.addColorStop(1, \"blue\");  \nctx.fillStyle = rg;  \nctx.beginPath();  \nctx.arc(330, 190, 50, 0, 2 * Math.PI);  \nctx.fill();  \n// image in canvas  \nvar img = new Image();  \nimg.src = \"sample.jpg\";  \nimg.onload = function() {  \nctx.drawImage(img, 450, 140, 100, 100);  \n};  \n</script>  \n<h2>SVG Shapes</h2>  \n<svg width=\"600\" height=\"300\" style=\"border:1px solid black;\">  \n<!-- line -->  \n<line x1=\"20\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"black\" />",
+                    "score": 0.7347054043587814,
+                    "metadata": {
+                        "page_label": "2",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7045446458187501,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 4,
+                    "topic": "HTML5 Canvas Shape Drawing",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7045446458187501,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        },
+        {
+            "question_id": 5,
+            "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+            "difficulty": "medium",
+            "sources": [
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7330122430927911,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7330122430927911,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Read the data from text files, CSV files, XML files and Json files and draw various\nappropriate charts, using HTML5 canvas and java script.  \nP r a c t i c a l  : 2  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 2</title>  \n</head>  \n<body>  \n<h2>CSV Data - Bar Chart</h2>  \n<canvas id=\"csvCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>JSON Data - Bar Chart</h2>  \n<canvas id=\"jsonCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>XML Data - Bar Chart</h2>  \n<canvas id=\"xmlCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<h2>Text Data - Bar Chart</h2>  \n<canvas id=\"txtCanvas\" width=\"500\" height=\"300\" style=\"border:1px solid black;\"></canvas>\n<script>  \nfunction drawBarChart(canvasId, labels, values) {  \nvar canvas = document.getElementById(canvasId);\nvar ctx = canvas.getContext(\"2d\");  \nvar maxVal = Math.max.apply(null, values);  \nvar barWidth = 60;  \nvar gap = 30;  \nvar x = 30;  \nfor (var i = 0; i < values.length; i++) {  \nvar barHeight = (values[i] / maxVal) * 200;\nctx.fillStyle = \"steelblue\";  \nctx.fillRect(x, 250 - barHeight, barWidth, barHeight);",
+                    "score": 0.7330122430927911,
+                    "metadata": {
+                        "page_label": "5",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "// XML data  \nvar xmlText = \"<items>\" +  \n\"<item><label>Raj</label><value>80</value></item>\" +\n\"<item><label>Amit</label><value>65</value></item>\" +\n\"<item><label>Neha</label><value>90</value></item>\" +  \n ctx.fillStyle = \"black\";  \nctx.fillText(labels[i], x, 265);\nctx.fillText(values[i], x + 15, 245 - barHeight);\nx = x + barWidth + gap;  \n}  \n}  \n// CSV data  \nvar csvText = \"Name,Marks\\nRaj,80\\nAmit,65\\nNeha,90\";\nvar csvLines = csvText.split(\"\\n\");  \nvar csvLabels = [];  \nvar csvValues = [];  \nfor (var i = 1; i < csvLines.length; i++) {  \nvar parts = csvLines[i].split(\",\");\ncsvLabels.push(parts[0]);\ncsvValues.push(Number(parts[1]));  \n}  \ndrawBarChart(\"csvCanvas\", csvLabels, csvValues);  \n// JSON data  \nVar jsonText='[{\"label\":\"Raj\",\"value\":80},{\"label\":\"Amit\",\"value\":65},  \n{\"label\":\"Neha\",\"value\":90}]';  \nvar jsonData = JSON.parse(jsonText);\nvar jsonLabels = [];  \nvar jsonValues = [];  \nfor (var i = 0; i < jsonData.length; i++) {  \njsonLabels.push(jsonData[i].label);\njsonValues.push(jsonData[i].value);  \n}  \ndrawBarChart(\"jsonCanvas\", jsonLabels, jsonValues);",
+                    "score": 0.7079694904061724,
+                    "metadata": {
+                        "page_label": "6",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "// XML data  \nvar xmlText = \"<items>\" +  \n\"<item><label>Raj</label><value>80</value></item>\" +\n\"<item><label>Amit</label><value>65</value></item>\" +\n\"<item><label>Neha</label><value>90</value></item>\" +  \n ctx.fillStyle = \"black\";  \nctx.fillText(labels[i], x, 265);\nctx.fillText(values[i], x + 15, 245 - barHeight);\nx = x + barWidth + gap;  \n}  \n}  \n// CSV data  \nvar csvText = \"Name,Marks\\nRaj,80\\nAmit,65\\nNeha,90\";\nvar csvLines = csvText.split(\"\\n\");  \nvar csvLabels = [];  \nvar csvValues = [];  \nfor (var i = 1; i < csvLines.length; i++) {  \nvar parts = csvLines[i].split(\",\");\ncsvLabels.push(parts[0]);\ncsvValues.push(Number(parts[1]));  \n}  \ndrawBarChart(\"csvCanvas\", csvLabels, csvValues);  \n// JSON data  \nVar jsonText='[{\"label\":\"Raj\",\"value\":80},{\"label\":\"Amit\",\"value\":65},  \n{\"label\":\"Neha\",\"value\":90}]';  \nvar jsonData = JSON.parse(jsonText);\nvar jsonLabels = [];  \nvar jsonValues = [];  \nfor (var i = 0; i < jsonData.length; i++) {  \njsonLabels.push(jsonData[i].label);\njsonValues.push(jsonData[i].value);  \n}  \ndrawBarChart(\"jsonCanvas\", jsonLabels, jsonValues);",
+                    "score": 0.7079694904061724,
+                    "metadata": {
+                        "page_label": "6",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "// XML data  \nvar xmlText = \"<items>\" +  \n\"<item><label>Raj</label><value>80</value></item>\" +\n\"<item><label>Amit</label><value>65</value></item>\" +\n\"<item><label>Neha</label><value>90</value></item>\" +  \n ctx.fillStyle = \"black\";  \nctx.fillText(labels[i], x, 265);\nctx.fillText(values[i], x + 15, 245 - barHeight);\nx = x + barWidth + gap;  \n}  \n}  \n// CSV data  \nvar csvText = \"Name,Marks\\nRaj,80\\nAmit,65\\nNeha,90\";\nvar csvLines = csvText.split(\"\\n\");  \nvar csvLabels = [];  \nvar csvValues = [];  \nfor (var i = 1; i < csvLines.length; i++) {  \nvar parts = csvLines[i].split(\",\");\ncsvLabels.push(parts[0]);\ncsvValues.push(Number(parts[1]));  \n}  \ndrawBarChart(\"csvCanvas\", csvLabels, csvValues);  \n// JSON data  \nVar jsonText='[{\"label\":\"Raj\",\"value\":80},{\"label\":\"Amit\",\"value\":65},  \n{\"label\":\"Neha\",\"value\":90}]';  \nvar jsonData = JSON.parse(jsonText);\nvar jsonLabels = [];  \nvar jsonValues = [];  \nfor (var i = 0; i < jsonData.length; i++) {  \njsonLabels.push(jsonData[i].label);\njsonValues.push(jsonData[i].value);  \n}  \ndrawBarChart(\"jsonCanvas\", jsonLabels, jsonValues);",
+                    "score": 0.7079694904061724,
+                    "metadata": {
+                        "page_label": "6",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Develop Following Program Using HTML5 and D3.js  \n• Showing the data as a column chart (simple)  \n• Showing the data as a stacked column chart  \n• Showing the data as a Line chart (single, fewer and multiple lines)\n• Showing the data as a Pie Chart (single and multiple pie)  \n• Showing the data as a Bar Chart (Simple and multiple)  \nP r a c t i c a l  :  6  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 6</title>  \n<script src=\"https://d3js.org/d3.v7.min.js\"></script>\n</head>  \n<body>  \n<h2>1. Simple Column Chart</h2>  \n<svg id=\"col1\" width=\"400\" height=\"300\"></svg>\n<h2>2. Stacked Column Chart</h2>  \n<svg id=\"col2\" width=\"400\" height=\"300\"></svg>\n<h2>3. Line Chart (Multiple Lines)</h2>  \n<svg id=\"line1\" width=\"400\" height=\"300\"></svg>\n<h2>4. Pie Chart (Single)</h2>  \n<svg id=\"pie1\" width=\"300\" height=\"300\"></svg>\n<h2>4b. Pie Chart (Multiple)</h2>  \n<svg id=\"pie2\" width=\"300\" height=\"300\"></svg>\n<svg id=\"pie3\" width=\"300\" height=\"300\"></svg>\n<h2>5. Bar Chart (Simple)</h2>  \n<svg id=\"bar1\" width=\"400\" height=\"300\"></svg>\n<script>  \n// 1. Simple Column Chart  \nvar data1 = [10, 25, 18, 30, 22];",
+                    "score": 0.7076959820895192,
+                    "metadata": {
+                        "page_label": "19",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 5,
+                    "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Develop Following Program Using HTML5 and D3.js  \n• Showing the data as a column chart (simple)  \n• Showing the data as a stacked column chart  \n• Showing the data as a Line chart (single, fewer and multiple lines)\n• Showing the data as a Pie Chart (single and multiple pie)  \n• Showing the data as a Bar Chart (Simple and multiple)  \nP r a c t i c a l  :  6  \nCode:  \n<!DOCTYPE html>  \n<html>  \n<head>  \n<title>Practical 6</title>  \n<script src=\"https://d3js.org/d3.v7.min.js\"></script>\n</head>  \n<body>  \n<h2>1. Simple Column Chart</h2>  \n<svg id=\"col1\" width=\"400\" height=\"300\"></svg>\n<h2>2. Stacked Column Chart</h2>  \n<svg id=\"col2\" width=\"400\" height=\"300\"></svg>\n<h2>3. Line Chart (Multiple Lines)</h2>  \n<svg id=\"line1\" width=\"400\" height=\"300\"></svg>\n<h2>4. Pie Chart (Single)</h2>  \n<svg id=\"pie1\" width=\"300\" height=\"300\"></svg>\n<h2>4b. Pie Chart (Multiple)</h2>  \n<svg id=\"pie2\" width=\"300\" height=\"300\"></svg>\n<svg id=\"pie3\" width=\"300\" height=\"300\"></svg>\n<h2>5. Bar Chart (Simple)</h2>  \n<svg id=\"bar1\" width=\"400\" height=\"300\"></svg>\n<script>  \n// 1. Simple Column Chart  \nvar data1 = [10, 25, 18, 30, 22];",
+                    "score": 0.7076959820895192,
+                    "metadata": {
+                        "page_label": "19",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        },
+        {
+            "question_id": 6,
+            "topic": "Rubric‑Based Assessment",
+            "difficulty": "medium",
+            "sources": [
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:\nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6779372500143809,
+                    "metadata": {
+                        "page_label": "18",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:\nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6779372500143809,
+                    "metadata": {
+                        "page_label": "18",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:\nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6779372500143809,
+                    "metadata": {
+                        "page_label": "18",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1. W3Schools – JSON Introduction:  https://www.w3schools.com/js/js_json_intro.asp\n2. W3Schools – HTML Canvas :  https://www.w3schools.com/html/html5_canvas.asp  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6730139862920034,
+                    "metadata": {
+                        "page_label": "9",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1. W3Schools – JSON Introduction:  https://www.w3schools.com/js/js_json_intro.asp\n2. W3Schools – HTML Canvas :  https://www.w3schools.com/html/html5_canvas.asp  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6730139862920034,
+                    "metadata": {
+                        "page_label": "9",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1. W3Schools – JSON Introduction:  https://www.w3schools.com/js/js_json_intro.asp\n2. W3Schools – HTML Canvas :  https://www.w3schools.com/html/html5_canvas.asp  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.6730139862920034,
+                    "metadata": {
+                        "page_label": "9",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1.  Seaborn Official Documentation:  https://seaborn.pydata.org/  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.671580910682683,
+                    "metadata": {
+                        "page_label": "15",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 6,
+                    "topic": "Rubric‑Based Assessment",
+                    "difficulty": "medium",
+                    "text": "Rubric wise marks obtained:  \nReferences used by the students:  \n1.  Seaborn Official Documentation:  https://seaborn.pydata.org/  \nM a r k s\nR u b r i c s\nP r a c t i c a l\nU n d e r s t a n d i n g\nP r o b l e m  \nS o l v i n g\nT a s k\nE x e c u t i o n\nD o c u m e n t a t i o n\na n d  R e p o r t i n g\nE t h i c a l  a n d  \nP r o f e s s i o n a l\nC o n d u c t  \nG o o d\n( 2 )  \nT o t a l\n \nA v g .\n( 1 )  \nG o o d  ( 2 )  A v g .\n( 1 )\nG o o d\n( 2 )  \nG o o d\n( 2 )  \nA v g .\n( 1 )\nG o o d  ( 2 )  A v g .\n( 1 )\nA v g .\n( 1 )",
+                    "score": 0.671580910682683,
+                    "metadata": {
+                        "page_label": "15",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        },
+        {
+            "question_id": 7,
+            "topic": "Seaborn Visualizations",
+            "difficulty": "medium",
+            "sources": [
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Explore Seaborn and make various visualizations:  \nP r a c t i c a l :  4  \nOutput:  \n#Pair Plot to Visualize Relationships\ndf= sns.load_dataset(\"iris\")\nsns.pairplot(df, hue=\"species\")\nplt.show()  \nCode:  \nimport seaborn as sns  \nimport matplotlib.pyplot as plt\nimport pandas as pd  \ndata = pd.DataFrame({  \n\"Math\": [80, 65, 90, 75, 85],\n\"Science\": [78, 60, 88, 70, 82],\n\"English\": [70, 72, 65, 80, 75]  \n} )  \nc o r r  =  d a t a . c o r r ( )  \ns n s . h e a t m a p ( c o r r ,  a n n o t = T r u e ,  c m a p = \" c o o l w a r m \" )\np l t . t i t l e ( \" C o r r e l a t i o n  H e a t m a p \" )  \np l t . s h o w ( )  \n#Violin Plot to Visualize Distribution\nsns.violinplot(x=\"species\", y=\"petal_length\", data=df)\nplt.title(\"Petal Length Distribution by Species\")\nplt.show()  \n• Create Heatmaps Using Seaborn to Visualize Correlations  \n• Use Pair Plots to Visualize Relationships Across Multiple Variables in a Dataset  \n•  Create Violin Plots to Visualize the Distribution of Data Across Categories",
+                    "score": 0.7732602357864434,
+                    "metadata": {
+                        "page_label": "13",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Explore Seaborn and make various visualizations:  \nP r a c t i c a l :  4  \nOutput:  \n#Pair Plot to Visualize Relationships\ndf= sns.load_dataset(\"iris\")\nsns.pairplot(df, hue=\"species\")\nplt.show()  \nCode:  \nimport seaborn as sns  \nimport matplotlib.pyplot as plt\nimport pandas as pd  \ndata = pd.DataFrame({  \n\"Math\": [80, 65, 90, 75, 85],\n\"Science\": [78, 60, 88, 70, 82],\n\"English\": [70, 72, 65, 80, 75]  \n} )  \nc o r r  =  d a t a . c o r r ( )  \ns n s . h e a t m a p ( c o r r ,  a n n o t = T r u e ,  c m a p = \" c o o l w a r m \" )\np l t . t i t l e ( \" C o r r e l a t i o n  H e a t m a p \" )  \np l t . s h o w ( )  \n#Violin Plot to Visualize Distribution\nsns.violinplot(x=\"species\", y=\"petal_length\", data=df)\nplt.title(\"Petal Length Distribution by Species\")\nplt.show()  \n• Create Heatmaps Using Seaborn to Visualize Correlations  \n• Use Pair Plots to Visualize Relationships Across Multiple Variables in a Dataset  \n•  Create Violin Plots to Visualize the Distribution of Data Across Categories",
+                    "score": 0.7732602357864434,
+                    "metadata": {
+                        "page_label": "13",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Explore Seaborn and make various visualizations:  \nP r a c t i c a l :  4  \nOutput:  \n#Pair Plot to Visualize Relationships\ndf= sns.load_dataset(\"iris\")\nsns.pairplot(df, hue=\"species\")\nplt.show()  \nCode:  \nimport seaborn as sns  \nimport matplotlib.pyplot as plt\nimport pandas as pd  \ndata = pd.DataFrame({  \n\"Math\": [80, 65, 90, 75, 85],\n\"Science\": [78, 60, 88, 70, 82],\n\"English\": [70, 72, 65, 80, 75]  \n} )  \nc o r r  =  d a t a . c o r r ( )  \ns n s . h e a t m a p ( c o r r ,  a n n o t = T r u e ,  c m a p = \" c o o l w a r m \" )\np l t . t i t l e ( \" C o r r e l a t i o n  H e a t m a p \" )  \np l t . s h o w ( )  \n#Violin Plot to Visualize Distribution\nsns.violinplot(x=\"species\", y=\"petal_length\", data=df)\nplt.title(\"Petal Length Distribution by Species\")\nplt.show()  \n• Create Heatmaps Using Seaborn to Visualize Correlations  \n• Use Pair Plots to Visualize Relationships Across Multiple Variables in a Dataset  \n•  Create Violin Plots to Visualize the Distribution of Data Across Categories",
+                    "score": 0.7732602357864434,
+                    "metadata": {
+                        "page_label": "13",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Explore Matplotlib and make various visualizations:  \nP r a c t i c a l :  3  \n•  C r e a t e  B a r  C h a r t s  a n d  P i e  C h a r t s  \n•  G e n e r a t e  a  H i s t o g r a m  t o  V i s u a l i z e  t h e  D i s t r i b u t i o n  o f  D a t a  \n•  C r e a t e  B o x  P l o t s  t o  U n d e r s t a n d  D a t a  S p r e a d  a n d  I d e n t i f y  O u t l i e r s\n•  C r e a t e  h e a t  m a p s  f r o m  V i s u a l i z e  t h e  c o r r e l a t i o n  o f  D a t a  \nCode:  \nimport matplotlib.pyplot as plt  \nimport numpy as np  \n# Bar Chart  \nx = [1, 2, 3, 4, 5]  \ny = [2, 5, 3, 8, 7]  \nplt.bar(x, y)  \nplt.title(\"Profit Analysis\")  \nplt.xlabel(\"Months\")  \nplt.ylabel(\"Profit\")  \nplt.show()  \n# Pie Chart  \nsubjects = [\"python\", \"java\", \"c\", \"javascript\"]  \nstudents = [30, 25, 20, 25]  \nplt.pie(students, labels=subjects, autopct=\"%0.1f%%\")  \nplt.title(\"Students Learning Programming Languages\")  \nplt.show()  \n# Histogram  \nages = [18, 19, 20, 20, 21, 21, 22, 22, 22, 23, 24, 24, 25, 25, 26, 27, 28, 29]\nplt.hist(ages, bins=12)  \nplt.title(\"Age Distribution\")  \nplt.xlabel(\"Age\")  \nplt.ylabel(\"Frequency\")  \nplt.show()",
+                    "score": 0.6928964487190978,
+                    "metadata": {
+                        "page_label": "10",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Explore Matplotlib and make various visualizations:  \nP r a c t i c a l :  3  \n•  C r e a t e  B a r  C h a r t s  a n d  P i e  C h a r t s  \n•  G e n e r a t e  a  H i s t o g r a m  t o  V i s u a l i z e  t h e  D i s t r i b u t i o n  o f  D a t a  \n•  C r e a t e  B o x  P l o t s  t o  U n d e r s t a n d  D a t a  S p r e a d  a n d  I d e n t i f y  O u t l i e r s\n•  C r e a t e  h e a t  m a p s  f r o m  V i s u a l i z e  t h e  c o r r e l a t i o n  o f  D a t a  \nCode:  \nimport matplotlib.pyplot as plt  \nimport numpy as np  \n# Bar Chart  \nx = [1, 2, 3, 4, 5]  \ny = [2, 5, 3, 8, 7]  \nplt.bar(x, y)  \nplt.title(\"Profit Analysis\")  \nplt.xlabel(\"Months\")  \nplt.ylabel(\"Profit\")  \nplt.show()  \n# Pie Chart  \nsubjects = [\"python\", \"java\", \"c\", \"javascript\"]  \nstudents = [30, 25, 20, 25]  \nplt.pie(students, labels=subjects, autopct=\"%0.1f%%\")  \nplt.title(\"Students Learning Programming Languages\")  \nplt.show()  \n# Histogram  \nages = [18, 19, 20, 20, 21, 21, 22, 22, 22, 23, 24, 24, 25, 25, 26, 27, 28, 29]\nplt.hist(ages, bins=12)  \nplt.title(\"Age Distribution\")  \nplt.xlabel(\"Age\")  \nplt.ylabel(\"Frequency\")  \nplt.show()",
+                    "score": 0.6928964487190978,
+                    "metadata": {
+                        "page_label": "10",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "D a t e :  \nAim: Explore Matplotlib and make various visualizations:  \nP r a c t i c a l :  3  \n•  C r e a t e  B a r  C h a r t s  a n d  P i e  C h a r t s  \n•  G e n e r a t e  a  H i s t o g r a m  t o  V i s u a l i z e  t h e  D i s t r i b u t i o n  o f  D a t a  \n•  C r e a t e  B o x  P l o t s  t o  U n d e r s t a n d  D a t a  S p r e a d  a n d  I d e n t i f y  O u t l i e r s\n•  C r e a t e  h e a t  m a p s  f r o m  V i s u a l i z e  t h e  c o r r e l a t i o n  o f  D a t a  \nCode:  \nimport matplotlib.pyplot as plt  \nimport numpy as np  \n# Bar Chart  \nx = [1, 2, 3, 4, 5]  \ny = [2, 5, 3, 8, 7]  \nplt.bar(x, y)  \nplt.title(\"Profit Analysis\")  \nplt.xlabel(\"Months\")  \nplt.ylabel(\"Profit\")  \nplt.show()  \n# Pie Chart  \nsubjects = [\"python\", \"java\", \"c\", \"javascript\"]  \nstudents = [30, 25, 20, 25]  \nplt.pie(students, labels=subjects, autopct=\"%0.1f%%\")  \nplt.title(\"Students Learning Programming Languages\")  \nplt.show()  \n# Histogram  \nages = [18, 19, 20, 20, 21, 21, 22, 22, 22, 23, 24, 24, 25, 25, 26, 27, 28, 29]\nplt.hist(ages, bins=12)  \nplt.title(\"Age Distribution\")  \nplt.xlabel(\"Age\")  \nplt.ylabel(\"Frequency\")  \nplt.show()",
+                    "score": 0.6928964487190978,
+                    "metadata": {
+                        "page_label": "10",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "#Box Plot  \nplt.boxplot(ages, patch_artist=True)\nplt.title(\"Age Distribution - Box Plot\")\nplt.ylabel(\"Age\")  \nplt.show()  \n#Heat Map  \ndata = np.array([  \n[10, 20, 30],  \n[40, 50, 60],  \n[70, 80, 90]  \n])  \nplt.imshow(data, cmap=\"hot\")\nplt.colorbar()\nplt.title(\"Heatmap\")\nplt.show()  \nOutput:",
+                    "score": 0.6907807382708595,
+                    "metadata": {
+                        "page_label": "11",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                },
+                {
+                    "question_id": 7,
+                    "topic": "Seaborn Visualizations",
+                    "difficulty": "medium",
+                    "text": "#Box Plot  \nplt.boxplot(ages, patch_artist=True)\nplt.title(\"Age Distribution - Box Plot\")\nplt.ylabel(\"Age\")  \nplt.show()  \n#Heat Map  \ndata = np.array([  \n[10, 20, 30],  \n[40, 50, 60],  \n[70, 80, 90]  \n])  \nplt.imshow(data, cmap=\"hot\")\nplt.colorbar()\nplt.title(\"Heatmap\")\nplt.show()  \nOutput:",
+                    "score": 0.6907807382708595,
+                    "metadata": {
+                        "page_label": "11",
+                        "file_name": "final3.pdf",
+                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\final3.pdf",
+                        "file_type": "application/pdf",
+                        "file_size": 1724931,
+                        "creation_date": "2026-08-22",
+                        "last_modified_date": "2026-08-18"
+                    }
+                }
+            ]
+        }
+    ]
+}

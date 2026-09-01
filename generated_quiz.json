@@ -1,0 +1,341 @@
+{
+    "total_questions": 7,
+    "questions": [
+        {
+            "question_id": 1,
+            "topic": "HTML5 Canvas Shape Drawing",
+            "difficulty": "easy",
+            "question": "In the canvas code, which color is set as the stroke style for the circle drawn at (280, 70)?",
+            "options": [
+                "red",
+                "blue",
+                "green",
+                "purple"
+            ],
+            "correct_answer": "red",
+            "explanation": "The source code sets `ctx.strokeStyle = \"red\";` before calling `ctx.stroke()` for the circle drawn with `ctx.arc(280, 70, 40, 0, 2 * Math.PI);`.",
+            "sources": [
+                {
+                    "page": "1",
+                    "score": 0.751131318543295
+                },
+                {
+                    "page": "1",
+                    "score": 0.751131318543295
+                },
+                {
+                    "page": "1",
+                    "score": 0.751131318543295
+                },
+                {
+                    "page": "2",
+                    "score": 0.7347054043587814
+                },
+                {
+                    "page": "2",
+                    "score": 0.7347054043587814
+                },
+                {
+                    "page": "2",
+                    "score": 0.7347054043587814
+                },
+                {
+                    "page": "5",
+                    "score": 0.7045446458187501
+                },
+                {
+                    "page": "5",
+                    "score": 0.7045446458187501
+                }
+            ]
+        },
+        {
+            "question_id": 2,
+            "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+            "difficulty": "easy",
+            "question": "In the provided drawBarChart function, which color is used to fill the bars?",
+            "options": [
+                "steelblue",
+                "red",
+                "green",
+                "black"
+            ],
+            "correct_answer": "steelblue",
+            "explanation": "The source code sets the fill style for the bars with the line `ctx.fillStyle = \"steelblue\";`, indicating that the bars are drawn in steelblue.",
+            "sources": [
+                {
+                    "page": "5",
+                    "score": 0.7330122430927911
+                },
+                {
+                    "page": "5",
+                    "score": 0.7330122430927911
+                },
+                {
+                    "page": "5",
+                    "score": 0.7330122430927911
+                },
+                {
+                    "page": "6",
+                    "score": 0.7079694904061724
+                },
+                {
+                    "page": "6",
+                    "score": 0.7079694904061724
+                },
+                {
+                    "page": "6",
+                    "score": 0.7079694904061724
+                },
+                {
+                    "page": "19",
+                    "score": 0.7076959820895192
+                },
+                {
+                    "page": "19",
+                    "score": 0.7076959820895192
+                }
+            ]
+        },
+        {
+            "question_id": 3,
+            "topic": "Rubric‑Based Assessment",
+            "difficulty": "easy",
+            "question": "According to the rubric, what rating was assigned to the \"Ethical and Professional Conduct\" criterion?",
+            "options": [
+                "Excellent (3)",
+                "Good (2)",
+                "Satisfactory (1)",
+                "Poor (0)"
+            ],
+            "correct_answer": "Good (2)",
+            "explanation": "The source material lists \"Ethical and Professional Conduct\" with the rating \"Good (2)\" in each rubric table.",
+            "sources": [
+                {
+                    "page": "18",
+                    "score": 0.6779372500143809
+                },
+                {
+                    "page": "18",
+                    "score": 0.6779372500143809
+                },
+                {
+                    "page": "18",
+                    "score": 0.6779372500143809
+                },
+                {
+                    "page": "9",
+                    "score": 0.6730139862920034
+                },
+                {
+                    "page": "9",
+                    "score": 0.6730139862920034
+                },
+                {
+                    "page": "9",
+                    "score": 0.6730139862920034
+                },
+                {
+                    "page": "15",
+                    "score": 0.671580910682683
+                },
+                {
+                    "page": "15",
+                    "score": 0.671580910682683
+                }
+            ]
+        },
+        {
+            "question_id": 4,
+            "topic": "HTML5 Canvas Shape Drawing",
+            "difficulty": "medium",
+            "question": "Which code fragment from the script draws a semicircle (half‑circle) with a purple outline on the canvas?",
+            "options": [
+                "ctx.beginPath(); ctx.arc(400, 70, 40, 0, Math.PI); ctx.strokeStyle = \"purple\"; ctx.stroke();",
+                "ctx.beginPath(); ctx.arc(400, 70, 40, 0, 2 * Math.PI); ctx.strokeStyle = \"purple\"; ctx.stroke();",
+                "ctx.beginPath(); ctx.arc(280, 70, 40, 0, Math.PI); ctx.strokeStyle = \"red\"; ctx.stroke();",
+                "ctx.arc(400, 70, 40, Math.PI, 0); ctx.strokeStyle = \"purple\"; ctx.stroke();"
+            ],
+            "correct_answer": "ctx.beginPath(); ctx.arc(400, 70, 40, 0, Math.PI); ctx.strokeStyle = \"purple\"; ctx.stroke();",
+            "explanation": "The source code creates a half‑circle by calling ctx.beginPath(), then ctx.arc(400, 70, 40, 0, Math.PI) and sets ctx.strokeStyle to \"purple\" before stroking. The other options either draw a full circle, use a different radius/position, or omit beginPath.",
+            "sources": [
+                {
+                    "page": "1",
+                    "score": 0.751131318543295
+                },
+                {
+                    "page": "1",
+                    "score": 0.751131318543295
+                },
+                {
+                    "page": "1",
+                    "score": 0.751131318543295
+                },
+                {
+                    "page": "2",
+                    "score": 0.7347054043587814
+                },
+                {
+                    "page": "2",
+                    "score": 0.7347054043587814
+                },
+                {
+                    "page": "2",
+                    "score": 0.7347054043587814
+                },
+                {
+                    "page": "5",
+                    "score": 0.7045446458187501
+                },
+                {
+                    "page": "5",
+                    "score": 0.7045446458187501
+                }
+            ]
+        },
+        {
+            "question_id": 5,
+            "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+            "difficulty": "medium",
+            "question": "In the provided JavaScript function drawBarChart, which statement is used to obtain the 2‑D drawing context of the canvas?",
+            "options": [
+                "var ctx = canvas.getContext(\"2d\");",
+                "var ctx = canvas.getContext(\"webgl\");",
+                "var ctx = canvas.getContext();",
+                "var ctx = canvas.getContext(\"2d\", {alpha:true});"
+            ],
+            "correct_answer": "var ctx = canvas.getContext(\"2d\");",
+            "explanation": "The source code shows the line `var ctx = canvas.getContext(\"2d\");` inside the drawBarChart function, which retrieves the 2‑D rendering context needed for drawing on the canvas.",
+            "sources": [
+                {
+                    "page": "5",
+                    "score": 0.7330122430927911
+                },
+                {
+                    "page": "5",
+                    "score": 0.7330122430927911
+                },
+                {
+                    "page": "5",
+                    "score": 0.7330122430927911
+                },
+                {
+                    "page": "6",
+                    "score": 0.7079694904061724
+                },
+                {
+                    "page": "6",
+                    "score": 0.7079694904061724
+                },
+                {
+                    "page": "6",
+                    "score": 0.7079694904061724
+                },
+                {
+                    "page": "19",
+                    "score": 0.7076959820895192
+                },
+                {
+                    "page": "19",
+                    "score": 0.7076959820895192
+                }
+            ]
+        },
+        {
+            "question_id": 6,
+            "topic": "Rubric‑Based Assessment",
+            "difficulty": "medium",
+            "question": "Which reference listed in the rubric assessment provides information about the HTML Canvas element?",
+            "options": [
+                "W3Schools – JSON Introduction",
+                "W3Schools – HTML Canvas",
+                "Seaborn Official Documentation",
+                "None of the above"
+            ],
+            "correct_answer": "W3Schools – HTML Canvas",
+            "explanation": "The source material includes the reference \"W3Schools – HTML Canvas : https://www.w3schools.com/html/html5_canvas.asp\", indicating it is the source that covers the HTML Canvas element.",
+            "sources": [
+                {
+                    "page": "18",
+                    "score": 0.6779372500143809
+                },
+                {
+                    "page": "18",
+                    "score": 0.6779372500143809
+                },
+                {
+                    "page": "18",
+                    "score": 0.6779372500143809
+                },
+                {
+                    "page": "9",
+                    "score": 0.6730139862920034
+                },
+                {
+                    "page": "9",
+                    "score": 0.6730139862920034
+                },
+                {
+                    "page": "9",
+                    "score": 0.6730139862920034
+                },
+                {
+                    "page": "15",
+                    "score": 0.671580910682683
+                },
+                {
+                    "page": "15",
+                    "score": 0.671580910682683
+                }
+            ]
+        },
+        {
+            "question_id": 7,
+            "topic": "Seaborn Visualizations",
+            "difficulty": "medium",
+            "question": "Which Seaborn function is demonstrated in the source material for visualizing the distribution of a numeric variable across different categories?",
+            "options": [
+                "sns.violinplot",
+                "sns.pairplot",
+                "sns.heatmap",
+                "sns.barplot"
+            ],
+            "correct_answer": "sns.violinplot",
+            "explanation": "The source material includes the code `sns.violinplot(x=\"species\", y=\"petal_length\", data=df)` which is used to visualize the distribution of petal length across species. This demonstrates that `sns.violinplot` is the function for visualizing distributions across categories.",
+            "sources": [
+                {
+                    "page": "13",
+                    "score": 0.7732602357864434
+                },
+                {
+                    "page": "13",
+                    "score": 0.7732602357864434
+                },
+                {
+                    "page": "13",
+                    "score": 0.7732602357864434
+                },
+                {
+                    "page": "10",
+                    "score": 0.6928964487190978
+                },
+                {
+                    "page": "10",
+                    "score": 0.6928964487190978
+                },
+                {
+                    "page": "10",
+                    "score": 0.6928964487190978
+                },
+                {
+                    "page": "11",
+                    "score": 0.6907807382708595
+                },
+                {
+                    "page": "11",
+                    "score": 0.6907807382708595
+                }
+            ]
+        }
+    ]
+}

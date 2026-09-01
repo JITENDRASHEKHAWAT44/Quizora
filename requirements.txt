@@ -1,0 +1,27 @@
+# LlamaIndex
+llama-index
+llama-index-llms-groq
+llama-index-embeddings-google-genai
+
+# LLM / Embeddings
+groq
+google-genai
+
+# Structured Output
+pydantic
+
+# PDF
+pypdf
+
+# Environment Variables
+python-dotenv
+
+# Backend
+fastapi
+uvicorn
+
+# Frontend
+streamlit
+
+# Database
+psycopg[binary]

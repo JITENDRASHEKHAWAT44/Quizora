@@ -1,0 +1,198 @@
+{
+    "total_questions": 30,
+    "difficulty_distribution": {
+        "easy": 9,
+        "medium": 15,
+        "hard": 6
+    },
+    "topic_distribution": [
+        {
+            "topic": "Decision Tree",
+            "importance": "high",
+            "raw_count": 6.923076923076923,
+            "question_count": 7
+        },
+        {
+            "topic": "Random Forest",
+            "importance": "high",
+            "raw_count": 6.923076923076923,
+            "question_count": 7
+        },
+        {
+            "topic": "K-Means Clustering",
+            "importance": "high",
+            "raw_count": 6.923076923076923,
+            "question_count": 7
+        },
+        {
+            "topic": "Supervised vs Unsupervised Learning",
+            "importance": "medium",
+            "raw_count": 4.615384615384615,
+            "question_count": 5
+        },
+        {
+            "topic": "Hands‑On Walkthrough (Model Mechanics, Worked Calculations, Applications, Trade‑offs)",
+            "importance": "medium",
+            "raw_count": 4.615384615384615,
+            "question_count": 4
+        }
+    ],
+    "generation_plan": {
+        "easy": [
+            {
+                "question_id": 1,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 2,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 3,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 4,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 5,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 6,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 7,
+                "topic": "Decision Tree",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 8,
+                "topic": "Random Forest",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 9,
+                "topic": "Random Forest",
+                "difficulty": "easy"
+            }
+        ],
+        "medium": [
+            {
+                "question_id": 10,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 11,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 12,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 13,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 14,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 15,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 16,
+                "topic": "Decision Tree",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 17,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 18,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 19,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 20,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 21,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 22,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 23,
+                "topic": "Random Forest",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 24,
+                "topic": "K-Means Clustering",
+                "difficulty": "medium"
+            }
+        ],
+        "hard": [
+            {
+                "question_id": 25,
+                "topic": "Decision Tree",
+                "difficulty": "hard"
+            },
+            {
+                "question_id": 26,
+                "topic": "Decision Tree",
+                "difficulty": "hard"
+            },
+            {
+                "question_id": 27,
+                "topic": "Decision Tree",
+                "difficulty": "hard"
+            },
+            {
+                "question_id": 28,
+                "topic": "Decision Tree",
+                "difficulty": "hard"
+            },
+            {
+                "question_id": 29,
+                "topic": "Decision Tree",
+                "difficulty": "hard"
+            },
+            {
+                "question_id": 30,
+                "topic": "Decision Tree",
+                "difficulty": "hard"
+            }
+        ]
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "total_questions": 7,
+    "difficulty_distribution": {
+        "easy": 3,
+        "medium": 4,
+        "hard": 0
+    },
+    "topic_distribution": [
+        {
+            "topic": "HTML5 Canvas Shape Drawing",
+            "importance": "medium",
+            "raw_count": 0.8235294117647058,
+            "question_count": 1
+        },
+        {
+            "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+            "importance": "medium",
+            "raw_count": 0.8235294117647058,
+            "question_count": 1
+        },
+        {
+            "topic": "Rubric‑Based Assessment",
+            "importance": "low",
+            "raw_count": 0.4117647058823529,
+            "question_count": 1
+        },
+        {
+            "topic": "Seaborn Visualizations",
+            "importance": "high",
+            "raw_count": 1.2352941176470589,
+            "question_count": 1
+        },
+        {
+            "topic": "Plotly Visualizations",
+            "importance": "high",
+            "raw_count": 1.2352941176470589,
+            "question_count": 1
+        },
+        {
+            "topic": "Matplotlib Visualizations",
+            "importance": "high",
+            "raw_count": 1.2352941176470589,
+            "question_count": 1
+        },
+        {
+            "topic": "D3.js Visualizations",
+            "importance": "high",
+            "raw_count": 1.2352941176470589,
+            "question_count": 1
+        }
+    ],
+    "generation_plan": {
+        "easy": [
+            {
+                "question_id": 1,
+                "topic": "HTML5 Canvas Shape Drawing",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 2,
+                "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                "difficulty": "easy"
+            },
+            {
+                "question_id": 3,
+                "topic": "Rubric‑Based Assessment",
+                "difficulty": "easy"
+            }
+        ],
+        "medium": [
+            {
+                "question_id": 4,
+                "topic": "HTML5 Canvas Shape Drawing",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 5,
+                "topic": "Data‑Driven Canvas Charts (HTML5/JavaScript)",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 6,
+                "topic": "Rubric‑Based Assessment",
+                "difficulty": "medium"
+            },
+            {
+                "question_id": 7,
+                "topic": "Seaborn Visualizations",
+                "difficulty": "medium"
+            }
+        ],
+        "hard": []
+    }
+}
