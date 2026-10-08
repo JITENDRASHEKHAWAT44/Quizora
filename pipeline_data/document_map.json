@@ -1,29 +1,44 @@
 {
     "topics": [
         {
-            "name": "Decision Tree",
-            "description": "A supervised learning model that splits data by selecting questions that best separate classes, illustrated with worked examples and applications.",
+            "name": "Aggregate Method in Amortized Analysis",
+            "description": "Analyzing a sequence of operations (e.g., incrementing a binary counter) by computing total cost over n operations and deriving average (amortized) cost per operation.",
             "importance": "high"
         },
         {
-            "name": "Random Forest",
-            "description": "An ensemble of many decision trees trained on random data subsets, using majority voting; covered with mechanics, calculations, and trade‑offs.",
-            "importance": "high"
-        },
-        {
-            "name": "K-Means Clustering",
-            "description": "An unsupervised learning algorithm that groups similar data points by iteratively moving toward centroids; explained with examples and real‑world uses.",
-            "importance": "high"
-        },
-        {
-            "name": "Supervised vs Unsupervised Learning",
-            "description": "The overarching framework distinguishing models that require labeled data (Decision Tree, Random Forest) from those that do not (K-Means).",
+            "name": "Potential Method for Amortized Analysis",
+            "description": "Defining a potential function to capture pre‑paid work, calculating amortized cost as actual cost plus change in potential, and applying it to data structure operations.",
             "importance": "medium"
         },
         {
-            "name": "Hands‑On Walkthrough (Model Mechanics, Worked Calculations, Applications, Trade‑offs)",
-            "description": "Practical section that walks through the mathematics, implementation steps, real‑world applications, and pros/cons of the three models.",
+            "name": "Asymptotic Notations (Big‑O, Θ, Ω)",
+            "description": "Formal definitions, interpretation of upper, tight, and lower bounds, and how to use them to classify algorithm running times.",
+            "importance": "high"
+        },
+        {
+            "name": "Growth‑Rate Comparison of Algorithms",
+            "description": "Using asymptotic notation to compare linear, quadratic, exponential, and logarithmic running times; interpreting tables that list algorithm runtimes for increasing input sizes.",
+            "importance": "high"
+        },
+        {
+            "name": "Summation Formulas for Time‑Complexity Analysis",
+            "description": "Common series such as Σ1 = n, Σi = n(n+1)/2, Σi², and geometric series; applying them to derive closed‑form bounds for loops and nested loops.",
             "importance": "medium"
+        },
+        {
+            "name": "Solving Recurrences by the Iteration (Expansion) Method",
+            "description": "Unfolding a recurrence step‑by‑step, using summation formulas to obtain a closed form, and verifying the solution with induction.",
+            "importance": "medium"
+        },
+        {
+            "name": "Master Theorem for Divide‑and‑Conquer Recurrences",
+            "description": "Identifying the parameters a, b, and f(n) in T(n)=aT(n/b)+f(n), applying the three cases of the theorem, and determining asymptotic bounds.",
+            "importance": "medium"
+        },
+        {
+            "name": "Time‑Complexity of Simple Loop Constructs",
+            "description": "Analyzing single and nested for‑loops, distinguishing between O(n), O(n²), and O(log n) patterns, and relating loop bounds to the summation formulas.",
+            "importance": "high"
         }
     ]
 }

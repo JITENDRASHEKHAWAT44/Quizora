@@ -91,19 +91,39 @@ def validate_question(question):
         question["question"],
         str
     ):
-
         errors.append(
             "Question must be a string."
         )
-
     elif not question[
         "question"
     ].strip():
-
         errors.append(
             "Question cannot be empty."
         )
-
+    else:
+        q_lower = question["question"].lower()
+        forbidden_patterns = [
+            "repeatedly mentioned",
+            "repeatedly presented",
+            "which term is repeatedly",
+            "which phrase is repeatedly",
+            "word is repeatedly",
+            "main topic referenced throughout",
+            "central activity being described",
+            "central subject that appears throughout",
+            "in the provided text",
+            "according to the provided text",
+            "in the source material",
+            "question id",
+            "mentioned in the passage",
+            "in the given material",
+        ]
+        for pattern in forbidden_patterns:
+            if pattern in q_lower:
+                errors.append(
+                    f"Trivial or meta-question rejected: contains '{pattern}'"
+                )
+                break
 
     # --------------------------------------
     # Options

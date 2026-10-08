@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quizora — Turn any study PDF into a graded quiz with AI. MCQs, difficulty mix, and answer key in one click." />
+    <title>Quizora — AI Quiz Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="/" class="brand" aria-label="Quizora home">
+          <div class="brand-logo">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="10" fill="url(#grad1)"/>
+              <path d="M16 8C11.582 8 8 11.582 8 16C8 20.418 11.582 24 16 24C20.418 24 24 20.418 24 16C24 11.582 20.418 8 16 8Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 12V17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="16" cy="20" r="1" fill="white"/>
+              <defs>
+                <linearGradient id="grad1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6366f1"/>
+                  <stop offset="1" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="brand-text">Quizora</span>
+        </a>
+
+        <div class="navbar-right">
+          <button class="btn-icon" id="settings-toggle" aria-label="Open settings" title="Quiz settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </button>
+          <span class="api-status-dot" id="api-dot" title="Checking API…"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== SETTINGS PANEL (slide-out) ===== -->
+    <aside class="settings-panel" id="settings-panel" aria-hidden="true">
+      <div class="settings-panel-inner">
+        <div class="settings-header">
+          <h2>Quiz Settings</h2>
+          <button class="btn-icon" id="settings-close" aria-label="Close settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <form id="settings-form">
+          <div class="settings-group">
+            <label class="settings-label" for="num-questions">Number of Questions</label>
+            <div class="number-input-wrap">
+              <button type="button" class="num-btn" id="num-dec" aria-label="Decrease">−</button>
+              <input type="number" id="num-questions" name="number_of_questions" min="1" max="100" value="10" required />
+              <button type="button" class="num-btn" id="num-inc" aria-label="Increase">+</button>
+            </div>
+          </div>
+
+          <div class="settings-group">
+            <label class="settings-label">Difficulty Mix</label>
+            <p class="settings-hint">Percentages must total 100%</p>
+
+            <div class="diff-sliders">
+              <div class="diff-row">
+                <span class="diff-label">
+                  <span class="diff-dot easy-dot"></span> Easy
+                </span>
+                <input type="range" id="easy" min="0" max="100" value="30" class="diff-range easy-range" />
+                <output id="easy-out" class="diff-value">30%</output>
+              </div>
+              <div class="diff-row">
+                <span class="diff-label">
+                  <span class="diff-dot medium-dot"></span> Medium
+                </span>
+                <input type="range" id="medium" min="0" max="100" value="50" class="diff-range medium-range" />
+                <output id="medium-out" class="diff-value">50%</output>
+              </div>
+              <div class="diff-row">
+                <span class="diff-label">
+                  <span class="diff-dot hard-dot"></span> Hard
+                </span>
+                <input type="range" id="hard" min="0" max="100" value="20" class="diff-range hard-range" />
+                <output id="hard-out" class="diff-value">20%</output>
+              </div>
+
+              <!-- stacked bar -->
+              <div class="diff-bar" aria-hidden="true">
+                <div class="diff-segment easy-seg" id="easy-seg"></div>
+                <div class="diff-segment medium-seg" id="medium-seg"></div>
+                <div class="diff-segment hard-seg" id="hard-seg"></div>
+              </div>
+              <p id="diff-total" class="diff-total ok">Total: 100%</p>
+            </div>
+          </div>
+
+          <div class="settings-group">
+            <label class="settings-label" for="api-base">API Base URL</label>
+            <p class="settings-hint">Leave empty to use same origin</p>
+            <input type="url" id="api-base" class="text-input" placeholder="http://localhost:8000" />
+          </div>
+        </form>
+      </div>
+    </aside>
+    <div class="settings-backdrop hidden" id="settings-backdrop"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 16 16" fill="none" class="sparkle-icon"><path d="M8 1L9.5 6.5L15 8L9.5 9.5L8 15L6.5 9.5L1 8L6.5 6.5L8 1Z" fill="currentColor"/></svg>
+          AI-Powered Quiz Generation
+        </div>
+        <h1 class="hero-title">
+          Turn any PDF into<br />
+          <span class="hero-gradient-text">a brilliant quiz</span>
+        </h1>
+        <p class="hero-subtitle">
+          Upload study material, configure your difficulty mix, and get<br class="hero-br" />
+          exam-ready MCQs with explanations — in minutes.
+        </p>
+        <div class="hero-features">
+          <div class="hero-feature"><span class="feature-check">✓</span> Source-grounded questions</div>
+          <div class="hero-feature"><span class="feature-check">✓</span> Tunable difficulty split</div>
+          <div class="hero-feature"><span class="feature-check">✓</span> PDF & JSON exports</div>
+          <div class="hero-feature"><span class="feature-check">✓</span> Interactive practice mode</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MAIN APP ===== -->
+    <main class="app-container" id="app">
+
+      <!-- UPLOAD CARD -->
+      <section class="card upload-card" id="upload-panel">
+        <div class="card-header">
+          <div class="card-header-left">
+            <div class="step-badge">01</div>
+            <div>
+              <h2 class="card-title">Upload your PDF</h2>
+              <p class="card-subtitle">Lecture notes, textbook chapters, study guides</p>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" id="settings-toggle-2" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Settings
+          </button>
+        </div>
+
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload PDF — drop or click">
+          <input type="file" id="file-input" accept=".pdf,application/pdf" hidden />
+          <div class="dropzone-icon" id="dropzone-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="4" width="36" height="48" rx="4" fill="#eef2ff" stroke="#c7d2fe" stroke-width="2"/>
+              <rect x="14" y="16" width="24" height="2.5" rx="1.25" fill="#a5b4fc"/>
+              <rect x="14" y="22" width="20" height="2.5" rx="1.25" fill="#c7d2fe"/>
+              <rect x="14" y="28" width="22" height="2.5" rx="1.25" fill="#c7d2fe"/>
+              <rect x="14" y="34" width="16" height="2.5" rx="1.25" fill="#c7d2fe"/>
+              <circle cx="46" cy="46" r="14" fill="#6366f1"/>
+              <path d="M46 40v12M40 46l6-6 6 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropzone-text" id="dropzone-text">
+            <p class="dropzone-title">Drop your PDF here</p>
+            <p class="dropzone-hint">or <span class="drop-link">click to browse</span></p>
+          </div>
+          <div class="dropzone-file hidden" id="dropzone-file">
+            <div class="file-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 48" fill="none" width="40">
+                <rect width="40" height="48" rx="6" fill="#fee2e2"/>
+                <rect x="6" y="12" width="20" height="2.5" rx="1.25" fill="#fca5a5"/>
+                <rect x="6" y="18" width="16" height="2.5" rx="1.25" fill="#fca5a5"/>
+                <rect x="6" y="24" width="18" height="2.5" rx="1.25" fill="#fca5a5"/>
+                <text x="5" y="42" font-size="9" font-weight="700" fill="#ef4444" font-family="monospace">PDF</text>
+              </svg>
+            </div>
+            <div class="file-info">
+              <p class="file-name" id="file-name"></p>
+              <p class="file-size" id="file-size"></p>
+            </div>
+            <button type="button" class="btn-icon remove-file" id="remove-file" aria-label="Remove file">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Settings summary chips -->
+        <div class="settings-chips" id="settings-chips">
+          <span class="chip"><strong id="chip-questions">10</strong> questions</span>
+          <span class="chip easy-chip"><strong id="chip-easy">30</strong>% easy</span>
+          <span class="chip medium-chip"><strong id="chip-medium">50</strong>% medium</span>
+          <span class="chip hard-chip"><strong id="chip-hard">20</strong>% hard</span>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-generate" id="generate-btn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon-svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Generate Quiz
+        </button>
+
+        <p id="status-msg" class="status-msg" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- RESULTS CARD -->
+      <section class="card results-card hidden" id="results-panel">
+        <div class="results-topbar">
+          <div class="results-topbar-left">
+            <div class="step-badge success-badge">✓</div>
+            <div>
+              <h2 class="card-title">Your Quiz</h2>
+              <p class="card-subtitle" id="results-subtitle">Ready to review</p>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" id="new-quiz-btn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            New Quiz
+          </button>
+        </div>
+
+        <!-- PROMINENT 2 PDF DOWNLOADS -->
+        <div class="pdf-export-banner" id="pdf-export-banner">
+          <div class="pdf-export-header">
+            <div class="pdf-export-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Download Official PDFs</span>
+            </div>
+            <span class="pdf-export-tag">Instant Export</span>
+          </div>
+          <div class="pdf-download-actions">
+            <a class="pdf-btn pdf-btn-questions" id="main-dl-questions" href="#" download>
+              <div class="pdf-btn-icon">📄</div>
+              <div class="pdf-btn-info">
+                <span class="pdf-btn-label">1. Question Paper (PDF)</span>
+                <span class="pdf-btn-sub">Printable questions &amp; options for students</span>
+              </div>
+              <span class="pdf-btn-badge">Download</span>
+            </a>
+            <a class="pdf-btn pdf-btn-answers" id="main-dl-answers" href="#" download>
+              <div class="pdf-btn-icon">📝</div>
+              <div class="pdf-btn-info">
+                <span class="pdf-btn-label">2. Answer Key &amp; Explanations (PDF)</span>
+                <span class="pdf-btn-sub">Full answer key with step-by-step explanations</span>
+              </div>
+              <span class="pdf-btn-badge">Download</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="metrics-grid" id="metrics-grid"></div>
+
+        <!-- Tabs -->
+        <div class="tabs-wrap" role="tablist" aria-label="Quiz tabs">
+          <button type="button" class="tab active" role="tab" data-tab="overview" aria-selected="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Overview
+          </button>
+          <button type="button" class="tab" role="tab" data-tab="preview" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            Preview
+          </button>
+          <button type="button" class="tab" role="tab" data-tab="practice" aria-selected="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Practice
+          </button>
+        </div>
+        <div class="tab-indicator" id="tab-indicator" aria-hidden="true"></div>
+
+        <div id="tab-overview" class="tab-panel active" role="tabpanel"></div>
+        <div id="tab-preview" class="tab-panel hidden" role="tabpanel"></div>
+        <div id="tab-practice" class="tab-panel hidden" role="tabpanel"></div>
+      </section>
+
+    </main>
+
+    <!-- ===== LOADING OVERLAY ===== -->
+    <div id="loading-overlay" class="loading-overlay hidden" aria-hidden="true" aria-live="assertive">
+      <div class="loading-card">
+        <div class="loading-animation">
+          <div class="loading-ring"></div>
+          <div class="loading-ring ring2"></div>
+          <div class="loading-icon">
+            <svg viewBox="0 0 32 32" fill="none" width="24"><path d="M16 4L20 14H30L22 20L25 30L16 24L7 30L10 20L2 14H12L16 4Z" fill="white"/></svg>
+          </div>
+        </div>
+        <h3 class="loading-title">Generating your quiz…</h3>
+        <p class="loading-subtitle" id="loading-msg">Analyzing PDF content</p>
+        <div class="loading-progress">
+          <div class="loading-bar" id="loading-bar"></div>
+        </div>
+        <div class="loading-steps" aria-hidden="true">
+          <div class="lstep active" id="lstep-1">
+            <div class="lstep-dot"></div>
+            <span>Parsing PDF</span>
+          </div>
+          <div class="lstep" id="lstep-2">
+            <div class="lstep-dot"></div>
+            <span>Analyzing content</span>
+          </div>
+          <div class="lstep" id="lstep-3">
+            <div class="lstep-dot"></div>
+            <span>Generating questions</span>
+          </div>
+          <div class="lstep" id="lstep-4">
+            <div class="lstep-dot"></div>
+            <span>Validating & ranking</span>
+          </div>
+          <div class="lstep" id="lstep-5">
+            <div class="lstep-dot"></div>
+            <span>Exporting files</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="/js/app.js" type="module"></script>
+  </body>
+</html>

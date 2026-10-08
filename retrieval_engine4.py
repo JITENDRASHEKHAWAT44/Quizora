@@ -4,66 +4,48 @@ import json
 from dotenv import load_dotenv
 
 from llama_index.core import Settings, VectorStoreIndex
-from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.vector_stores.postgres import PGVectorStore
 
 
-# ==========================================
-# 1. Configuration
-# ==========================================
-
 load_dotenv()
-
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-
-if not GOOGLE_API_KEY:
-    raise ValueError("GOOGLE_API_KEY is missing from .env")
-
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
 # ==========================================
-# 2. Configure Gemini Embeddings
+# Lazy singleton — model loads once on
+# first call, not at import time.
 # ==========================================
 
-embed_model = GoogleGenAIEmbedding(
-    model_name="models/gemini-embedding-001",
-    api_key=GOOGLE_API_KEY,
-)
+_retriever = None
 
-Settings.embed_model = embed_model
+def _get_retriever():
+    global _retriever
+    if _retriever is not None:
+        return _retriever
 
+    embed_model = HuggingFaceEmbedding(
+        model_name="Qwen/Qwen3-Embedding-0.6B",
+        trust_remote_code=True,
+        device="cuda",
+    )
+    Settings.embed_model = embed_model
 
-# ==========================================
-# 3. Connect to PostgreSQL + pgvector
-# ==========================================
+    vector_store = PGVectorStore.from_params(
+        database="quizora",
+        host="localhost",
+        password="quizora123",
+        port=5433,
+        user="postgres",
+        table_name="QWEN_pdf_chunks",
+        embed_dim=1024,
+    )
 
-vector_store = PGVectorStore.from_params(
-    database="quizora",
-    host="localhost",
-    password="quizora123",
-    port=5433,
-    user="postgres",
-    table_name="pdf_chunks",
-    embed_dim=3072,
-)
+    index = VectorStoreIndex.from_vector_store(
+        vector_store=vector_store
+    )
 
-
-# ==========================================
-# 4. Load existing vector index
-# ==========================================
-
-index = VectorStoreIndex.from_vector_store(
-    vector_store=vector_store
-)
-
-
-# ==========================================
-# 5. Create Retriever
-# ==========================================
-
-retriever = index.as_retriever(
-    similarity_top_k=8
-)
-
+    _retriever = index.as_retriever(similarity_top_k=8)
+    return _retriever
 
 # ==========================================
 # 6. Retrieve material for ONE question
@@ -87,7 +69,7 @@ def retrieve_for_question(
     details related to this topic.
     """
 
-    nodes = retriever.retrieve(query)
+    nodes = _get_retriever().retrieve(query)
 
     sources = []
 

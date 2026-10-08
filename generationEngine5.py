@@ -117,9 +117,9 @@ SOURCE MATERIAL:
     )
 
     prompt = f"""
-You are an expert academic assessment generator.
+You are an expert university professor creating a high-stakes academic exam.
 
-Generate EXACTLY ONE MCQ for EACH QUESTION ID below.
+Generate EXACTLY ONE high-quality Multiple Choice Question (MCQ) for EACH QUESTION ID below.
 
 QUESTION REQUIREMENTS:
 {instructions}
@@ -127,41 +127,44 @@ QUESTION REQUIREMENTS:
 SOURCE MATERIAL FOR EACH QUESTION:
 {context}
 
-STRICT RULES:
+CRITICAL RULES & PEDAGOGICAL STANDARDS:
 
-1. Use ONLY the source material provided.
-2. Do NOT use outside knowledge.
-3. Generate exactly ONE question for EACH QUESTION ID.
-4. Generate exactly FOUR options for every question.
-5. Only ONE option must be correct.
-6. The correct answer MUST be directly supported
-   by the corresponding source material.
-7. Distractors must be plausible.
-8. Do not create ambiguous questions.
-9. Do not mention the source material in the question.
-10. Include a concise explanation.
-11. Match the requested difficulty.
-12. Do not create a question whose answer cannot
-    be determined from the source material.
-13. Do not omit any requested question.
-14. Do not create additional questions.
+1. TEST REAL CONCEPTS & UNDERSTANDING:
+   - Every question must test domain understanding: definitions, formulas, principles, mechanisms, algorithm steps, behavior under conditions, time/space complexity, comparisons, and trade-offs.
+   - Example GOOD: "What is the primary condition required for binary search to function correctly?"
+   - Example GOOD: "In worst-case analysis, which asymptotic notation provides a tight bound?"
+   - Example GOOD: "Why is dynamic programming preferred over divide-and-conquer for the Fibonacci sequence?"
 
-Return ONLY valid JSON.
+2. ABSOLUTELY FORBIDDEN QUESTION PATTERNS (DO NOT GENERATE):
+   - FORBIDDEN: Asking about word frequency, text layout, or mentions (e.g., "Which term is repeatedly mentioned?", "What is the main topic of the passage?", "Which phrase appears most often?").
+   - FORBIDDEN: Referring to the text directly (e.g., "According to the provided text", "In the passage", "In the source material", "For Question ID X", "As mentioned by the author").
+   - The question must stand alone as an authentic exam question.
 
-Use exactly this format:
+3. OPTIONS & DISTRACTORS:
+   - Provide exactly FOUR distinct, plausible technical options (A, B, C, D).
+   - Only ONE option must be correct.
+   - The 3 distractors must be realistic domain concepts, NOT trivial mutations or jokes.
+   - Do NOT make the correct answer identical across multiple questions.
+
+4. DIFFICULTY CALIBRATION:
+   - Easy: Direct definition, foundational concept, or basic identification.
+   - Medium: Conceptual comparison, procedural steps, or behavior under specific inputs.
+   - Hard: In-depth analysis, trade-offs, edge cases, or complexity derivations.
+
+Return ONLY valid JSON matching this exact format:
 
 {{
     "questions": [
         {{
-            "question": "...",
+            "question": "Clear, direct conceptual question here?",
             "options": [
-                "...",
-                "...",
-                "...",
-                "..."
+                "Plausible Option A",
+                "Plausible Option B",
+                "Plausible Option C",
+                "Plausible Option D"
             ],
-            "correct_answer": "...",
-            "explanation": "..."
+            "correct_answer": "Plausible Option A",
+            "explanation": "Clear explanation of why this answer is correct based on the subject matter."
         }}
     ]
 }}
@@ -173,61 +176,32 @@ Use exactly this format:
         f"questions to Groq..."
     )
 
-    # ==========================================
-    # Call Groq
-    # ==========================================
-
     response = llm.complete(prompt)
-
     raw_output = response.text.strip()
 
-    # ==========================================
-    # Remove markdown fences
-    # ==========================================
-
-    if raw_output.startswith("```"):
-
-        raw_output = raw_output.replace(
-            "```json",
-            "",
-        )
-
-        raw_output = raw_output.replace(
-            "```",
-            "",
-        )
-
-        raw_output = raw_output.strip()
-
-    # ==========================================
-    # Parse JSON
-    # ==========================================
+    # Robust JSON extraction
+    import re
+    cleaned = raw_output
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"\s*```$", "", cleaned)
+        cleaned = cleaned.strip()
 
     try:
-
-        data = json.loads(
-            raw_output
-        )
-
+        data = json.loads(cleaned)
     except json.JSONDecodeError:
+        match = re.search(r'(\{[\s\S]*\})', raw_output)
+        if match:
+            data = json.loads(match.group(1))
+        else:
+            print("\nInvalid JSON returned by LLM:")
+            print(raw_output)
+            raise
 
-        print(
-            "\nInvalid JSON returned by LLM:"
-        )
-
-        print(raw_output)
-
-        raise
-
-    # ==========================================
     # Pydantic validation
-    # ==========================================
-
-    result = MCQTest.model_validate(
-        data
-    )
-
+    result = MCQTest.model_validate(data)
     return result.questions
+
 
 
 # ==========================================

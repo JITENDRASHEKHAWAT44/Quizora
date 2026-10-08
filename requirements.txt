@@ -2,7 +2,7 @@
 llama-index
 llama-index-llms-groq
 llama-index-embeddings-google-genai
-
+llama-index-embeddings-huggingface
 # LLM / Embeddings
 groq
 google-genai
@@ -10,8 +10,12 @@ google-genai
 # Structured Output
 pydantic
 
+sentence-transformers
+torch
+transformers
 # PDF
 pypdf
+reportlab
 
 # Environment Variables
 python-dotenv
@@ -19,6 +23,7 @@ python-dotenv
 # Backend
 fastapi
 uvicorn
+python-multipart
 
 # Frontend
 streamlit

@@ -1,6 +1,12 @@
+import sys
 import json
 import shutil
 from pathlib import Path
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 from ingestion_1 import ingest_document
 from document_analyzer_2 import analyze_document
@@ -402,8 +408,17 @@ if __name__ == "__main__":
         input("Hard percentage (default 20): ") or 20
     )
 
+    pdf_choice = input(
+        "\nPDF file path (press Enter for 'data/Decision_Tree_Random_Forest_KMeans.pdf' or type a path): "
+    ).strip()
+
+    if not pdf_choice:
+        pdf_choice = "data/Decision_Tree_Random_Forest_KMeans.pdf"
+        if not Path(pdf_choice).exists():
+            pdf_choice = "data"
+
     result = generate_quiz_pipeline(
-        pdf_path="data",
+        pdf_path=pdf_choice,
         number_of_questions=number_of_questions,
         easy_percent=easy_percent,
         medium_percent=medium_percent,
@@ -420,3 +435,4 @@ if __name__ == "__main__":
 
     print("\nFINAL RESULT:")
     print(result)
+    

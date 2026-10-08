@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -11,16 +12,12 @@ from llama_index.core import (
 
 from llama_index.core.node_parser import SentenceSplitter
 
-from llama_index.embeddings.google_genai import (
-    GoogleGenAIEmbedding,
-)
-
-from llama_index.vector_stores.postgres import (
-    PGVectorStore,
-)
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.vector_stores.postgres import PGVectorStore
 
 
 load_dotenv()
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
 
 def ingest_document(pdf_path=None):
@@ -29,9 +26,11 @@ def ingest_document(pdf_path=None):
     # 1. Gemini Embedding Model
     # ==========================================
 
-    embed_model = GoogleGenAIEmbedding(
-        model_name="models/gemini-embedding-001",
-        api_key=os.getenv("GOOGLE_API_KEY"),
+    embed_model = HuggingFaceEmbedding(
+        model_name="Qwen/Qwen3-Embedding-0.6B",
+        trust_remote_code=True,
+        device="cuda",
+        embed_batch_size=16,
     )
 
     Settings.embed_model = embed_model
@@ -41,10 +40,20 @@ def ingest_document(pdf_path=None):
     # 2. Load PDF
     # ==========================================
 
+    target_path = Path(pdf_path) if pdf_path else Path("data")
+    print(f"Ingesting from: {target_path}")
+
+    if target_path.is_file():
+        pdf_files = [target_path]
+    elif target_path.is_dir():
+        pdf_files = list(target_path.glob("*.pdf"))
+        if not pdf_files:
+            raise FileNotFoundError(f"No .pdf files found in {target_path}")
+    else:
+        raise FileNotFoundError(f"Path does not exist: {target_path}")
+
     documents = SimpleDirectoryReader(
-        input_dir="data",
-        recursive=True,
-        required_exts=[".pdf"],
+        input_files=[str(p) for p in pdf_files],
     ).load_data()
 
     print(
@@ -80,8 +89,8 @@ def ingest_document(pdf_path=None):
         password="quizora123",
         port=5433,
         user="postgres",
-        table_name="pdf_chunks",
-        embed_dim=3072,
+        table_name="QWEN_pdf_chunks",
+        embed_dim=1024,
     )
 
 
@@ -101,6 +110,7 @@ def ingest_document(pdf_path=None):
     index = VectorStoreIndex(
         chunks,
         storage_context=storage_context,
+        show_progress=True,
     )
 
 

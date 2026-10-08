@@ -1,196 +1,94 @@
 {
-    "total_questions": 30,
+    "total_questions": 6,
     "difficulty_distribution": {
-        "easy": 9,
-        "medium": 15,
-        "hard": 6
+        "easy": 2,
+        "medium": 3,
+        "hard": 1
     },
     "topic_distribution": [
         {
-            "topic": "Decision Tree",
+            "topic": "Aggregate Method in Amortized Analysis",
             "importance": "high",
-            "raw_count": 6.923076923076923,
-            "question_count": 7
+            "raw_count": 0.9,
+            "question_count": 1
         },
         {
-            "topic": "Random Forest",
+            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
             "importance": "high",
-            "raw_count": 6.923076923076923,
-            "question_count": 7
+            "raw_count": 0.9,
+            "question_count": 1
         },
         {
-            "topic": "K-Means Clustering",
+            "topic": "Growth‑Rate Comparison of Algorithms",
             "importance": "high",
-            "raw_count": 6.923076923076923,
-            "question_count": 7
+            "raw_count": 0.9,
+            "question_count": 1
         },
         {
-            "topic": "Supervised vs Unsupervised Learning",
+            "topic": "Time‑Complexity of Simple Loop Constructs",
+            "importance": "high",
+            "raw_count": 0.9,
+            "question_count": 1
+        },
+        {
+            "topic": "Potential Method for Amortized Analysis",
             "importance": "medium",
-            "raw_count": 4.615384615384615,
-            "question_count": 5
+            "raw_count": 0.6,
+            "question_count": 1
         },
         {
-            "topic": "Hands‑On Walkthrough (Model Mechanics, Worked Calculations, Applications, Trade‑offs)",
+            "topic": "Summation Formulas for Time‑Complexity Analysis",
             "importance": "medium",
-            "raw_count": 4.615384615384615,
-            "question_count": 4
+            "raw_count": 0.6,
+            "question_count": 1
+        },
+        {
+            "topic": "Solving Recurrences by the Iteration (Expansion) Method",
+            "importance": "medium",
+            "raw_count": 0.6,
+            "question_count": 0
+        },
+        {
+            "topic": "Master Theorem for Divide‑and‑Conquer Recurrences",
+            "importance": "medium",
+            "raw_count": 0.6,
+            "question_count": 0
         }
     ],
     "generation_plan": {
         "easy": [
             {
                 "question_id": 1,
-                "topic": "Decision Tree",
+                "topic": "Aggregate Method in Amortized Analysis",
                 "difficulty": "easy"
             },
             {
                 "question_id": 2,
-                "topic": "Decision Tree",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 3,
-                "topic": "Decision Tree",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 4,
-                "topic": "Decision Tree",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 5,
-                "topic": "Decision Tree",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 6,
-                "topic": "Decision Tree",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 7,
-                "topic": "Decision Tree",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 8,
-                "topic": "Random Forest",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 9,
-                "topic": "Random Forest",
+                "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
                 "difficulty": "easy"
             }
         ],
         "medium": [
             {
-                "question_id": 10,
-                "topic": "Decision Tree",
+                "question_id": 3,
+                "topic": "Aggregate Method in Amortized Analysis",
                 "difficulty": "medium"
             },
             {
-                "question_id": 11,
-                "topic": "Decision Tree",
+                "question_id": 4,
+                "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
                 "difficulty": "medium"
             },
             {
-                "question_id": 12,
-                "topic": "Decision Tree",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 13,
-                "topic": "Decision Tree",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 14,
-                "topic": "Decision Tree",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 15,
-                "topic": "Decision Tree",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 16,
-                "topic": "Decision Tree",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 17,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 18,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 19,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 20,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 21,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 22,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 23,
-                "topic": "Random Forest",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 24,
-                "topic": "K-Means Clustering",
+                "question_id": 5,
+                "topic": "Growth‑Rate Comparison of Algorithms",
                 "difficulty": "medium"
             }
         ],
         "hard": [
             {
-                "question_id": 25,
-                "topic": "Decision Tree",
-                "difficulty": "hard"
-            },
-            {
-                "question_id": 26,
-                "topic": "Decision Tree",
-                "difficulty": "hard"
-            },
-            {
-                "question_id": 27,
-                "topic": "Decision Tree",
-                "difficulty": "hard"
-            },
-            {
-                "question_id": 28,
-                "topic": "Decision Tree",
-                "difficulty": "hard"
-            },
-            {
-                "question_id": 29,
-                "topic": "Decision Tree",
-                "difficulty": "hard"
-            },
-            {
-                "question_id": 30,
-                "topic": "Decision Tree",
+                "question_id": 6,
+                "topic": "Aggregate Method in Amortized Analysis",
                 "difficulty": "hard"
             }
         ]

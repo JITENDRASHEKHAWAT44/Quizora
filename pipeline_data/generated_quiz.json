@@ -1,1443 +1,291 @@
 {
-    "total_questions": 30,
+    "total_questions": 6,
     "questions": [
         {
             "question_id": 1,
-            "topic": "Decision Tree",
+            "topic": "Aggregate Method in Amortized Analysis",
             "difficulty": "easy",
-            "question": "Which of the following is mentioned as a merit of decision trees?",
+            "question": "In the aggregate method of amortized analysis, how is the amortized cost of an operation determined?",
             "options": [
-                "Fully interpretable – you can read the exact decision path (a “white box” model)",
-                "Prone to overfitting – a fully grown tree can memorise noise",
-                "Biased toward features with many distinct values/levels",
-                "Poor at extrapolating beyond the range seen in training (regression)"
+                "By dividing the total cost of a sequence of operations by the number of operations in the sequence",
+                "By taking the worst‑case cost of a single operation and using it for all operations",
+                "By analyzing only the most expensive operation and ignoring the rest",
+                "By assigning zero cost to all inexpensive operations"
             ],
-            "correct_answer": "Fully interpretable – you can read the exact decision path (a “white box” model)",
-            "explanation": "The source lists “Fully interpretable — you can read the exact decision path (a ‘white box’ model)” as one of the merits of decision trees.",
+            "correct_answer": "By dividing the total cost of a sequence of operations by the number of operations in the sequence",
+            "explanation": "The aggregate method computes the total cost of a whole sequence of operations and then averages it over the number of operations, yielding the amortized cost per operation.",
             "sources": [
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "102",
+                    "score": 0.7797842753062098
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "102",
+                    "score": 0.7790509462356567
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "101",
+                    "score": 0.7757694125175476
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "101",
+                    "score": 0.7734922170639038
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "108",
+                    "score": 0.7166101932525635
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "108",
+                    "score": 0.7144298979300212
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "99",
+                    "score": 0.696382999420166
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "99",
+                    "score": 0.6933793242799845
                 }
             ]
         },
         {
             "question_id": 2,
-            "topic": "Decision Tree",
+            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
             "difficulty": "easy",
-            "question": "Which of the following is listed as a disadvantage of decision trees?",
+            "question": "Which asymptotic notation provides an upper bound on the growth rate of a function?",
             "options": [
-                "No feature scaling or normalisation needed",
-                "Naturally handles both numeric and categorical features",
-                "Cheap and fast to train and to score new records",
-                "Unstable – a small change in data can produce a very different tree"
+                "Big O (O)",
+                "Omega (Ω)",
+                "Theta (Θ)",
+                "Little‑o (o)"
             ],
-            "correct_answer": "Unstable – a small change in data can produce a very different tree",
-            "explanation": "The source material cites “Unstable: a small change in data can produce a very different tree” as a dem­erit of decision trees.",
+            "correct_answer": "Big O (O)",
+            "explanation": "Big O notation describes an upper bound, meaning the function grows no faster than the given rate up to constant factors for sufficiently large inputs.",
             "sources": [
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "13",
+                    "score": 0.6888062543388466
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "13",
+                    "score": 0.6880428380940665
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "19",
+                    "score": 0.6661173900295871
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "19",
+                    "score": 0.6648379564285326
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "18",
+                    "score": 0.6539174524594883
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "18",
+                    "score": 0.6529210416721688
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "20",
+                    "score": 0.6473775506019638
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "20",
+                    "score": 0.6388128615133261
                 }
             ]
         },
         {
             "question_id": 3,
-            "topic": "Decision Tree",
-            "difficulty": "easy",
-            "question": "Which of the following is a disadvantage (not a merit) of decision trees?",
+            "topic": "Aggregate Method in Amortized Analysis",
+            "difficulty": "medium",
+            "question": "Using the aggregate method, a binary counter is incremented n times starting from zero. The total number of bit flips over the n increments is at most 2n. What is the amortized cost per increment operation?",
             "options": [
-                "They are fully interpretable (white‑box model)",
-                "No feature scaling or normalisation is required",
-                "They can be prone to overfitting when fully grown",
-                "They naturally handle both numeric and categorical features"
+                "Θ(1) (constant time)",
+                "Θ(log n) (logarithmic time)",
+                "Θ(n) (linear time)",
+                "Θ(n log n) (n log n time)"
             ],
-            "correct_answer": "They can be prone to overfitting when fully grown",
-            "explanation": "The source material lists \"Prone to overfitting — a fully grown tree can memorise noise\" under DEMERITS, indicating it is a disadvantage, whereas the other statements are listed as merits.",
+            "correct_answer": "Θ(1) (constant time)",
+            "explanation": "The aggregate method computes the total cost of a sequence of operations and divides by the number of operations. Here the total number of bit flips for n increments is ≤ 2n, so the amortized cost per increment is (2n)/n = 2 = Θ(1).",
             "sources": [
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "102",
+                    "score": 0.7797842753062098
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "102",
+                    "score": 0.7790509462356567
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "101",
+                    "score": 0.7757694125175476
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "101",
+                    "score": 0.7734922170639038
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "108",
+                    "score": 0.7166101932525635
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "108",
+                    "score": 0.7144298979300212
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "99",
+                    "score": 0.696382999420166
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "99",
+                    "score": 0.6933793242799845
                 }
             ]
         },
         {
             "question_id": 4,
-            "topic": "Decision Tree",
-            "difficulty": "easy",
-            "question": "In which of the following settings is a decision tree model commonly applied?",
+            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
+            "difficulty": "medium",
+            "question": "Given the functions f(n) = 3n + 5 and g(n) = n², which of the following statements correctly describes their asymptotic relationship?",
             "options": [
-                "Credit scoring rules",
-                "Real‑time video streaming compression",
-                "Speech‑to‑text transcription",
-                "Deep‑learning image classification"
+                "f(n) = O(g(n)) but f(n) ≠ Ω(g(n))",
+                "f(n) = Ω(g(n)) but f(n) ≠ O(g(n))",
+                "f(n) = Θ(g(n))",
+                "g(n) = O(f(n))"
             ],
-            "correct_answer": "Credit scoring rules",
-            "explanation": "The source material lists \"Credit scoring rules\" among the APPLICATIONS for decision trees, while the other options are not mentioned.",
+            "correct_answer": "f(n) = O(g(n)) but f(n) ≠ Ω(g(n))",
+            "explanation": "Since n² grows faster than any linear function, 3n+5 is bounded above by a constant multiple of n² for sufficiently large n, so f(n) = O(g(n)). However, f(n) is not a lower bound for g(n); g(n) is not bounded above by a constant multiple of f(n), so f(n) ≠ Ω(g(n)). Therefore the correct relationship is f(n) = O(g(n)) but not Ω(g(n)).",
             "sources": [
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "13",
+                    "score": 0.6888062543388466
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "13",
+                    "score": 0.6880428380940665
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "19",
+                    "score": 0.6661173900295871
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "19",
+                    "score": 0.6648379564285326
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "18",
+                    "score": 0.6539174524594883
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "18",
+                    "score": 0.6529210416721688
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "20",
+                    "score": 0.6473775506019638
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "20",
+                    "score": 0.6388128615133261
                 }
             ]
         },
         {
             "question_id": 5,
-            "topic": "Decision Tree",
-            "difficulty": "easy",
-            "question": "Which of the following is mentioned as a merit of decision trees?",
+            "topic": "Growth‑Rate Comparison of Algorithms",
+            "difficulty": "medium",
+            "question": "Which of the following algorithms has the highest asymptotic worst‑case time complexity?",
             "options": [
-                "Fully interpretable – you can read the exact decision path (a “white box” model)",
-                "Prone to overfitting – a fully grown tree can memorise noise",
-                "Unstable – a small change in data can produce a very different tree",
-                "Poor at extrapolating beyond the range seen in training (regression)"
+                "Floyd‑Warshall algorithm – O(n³)",
+                "Strassen's matrix multiplication – O(n²·⁸¹)",
+                "Huffman coding – O(n log n)",
+                "Binary search – O(log n)"
             ],
-            "correct_answer": "Fully interpretable – you can read the exact decision path (a “white box” model)",
-            "explanation": "The source material lists “Fully interpretable — you can read the exact decision path (a ‘white box’ model)” under the Merits of decision trees.",
+            "correct_answer": "Floyd‑Warshall algorithm – O(n³)",
+            "explanation": "In the worst case, Floyd‑Warshall runs in Θ(n³) time, which grows faster than Θ(n²·⁸¹) (Strassen), Θ(n log n) (Huffman), and Θ(log n) (binary search). Therefore it has the highest asymptotic worst‑case complexity among the listed algorithms.",
             "sources": [
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "4",
+                    "score": 0.5534259347065736
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "13",
+                    "score": 0.5528863338895847
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "13",
+                    "score": 0.5517952113273623
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "4",
+                    "score": 0.5512898831790765
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "4",
+                    "score": 0.5479389641394093
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "3",
+                    "score": 0.538357908921491
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "23",
+                    "score": 0.5381104625397655
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "3",
+                    "score": 0.5366857008116602
                 }
             ]
         },
         {
             "question_id": 6,
-            "topic": "Decision Tree",
-            "difficulty": "easy",
-            "question": "Which of the following is listed as a demerit of decision trees?",
-            "options": [
-                "No feature scaling or normalisation needed",
-                "Naturally handles both numeric and categorical features",
-                "Unstable: a small change in data can produce a very different tree",
-                "Cheap and fast to train and to score new records"
-            ],
-            "correct_answer": "Unstable: a small change in data can produce a very different tree",
-            "explanation": "The source material includes “Unstable: a small change in data can produce a very different tree” under the Demerits of decision trees.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 7,
-            "topic": "Decision Tree",
-            "difficulty": "easy",
-            "question": "Which of the following is listed as a merit of decision trees?",
-            "options": [
-                "Fully interpretable – you can read the exact decision path",
-                "Prone to overfitting – a fully grown tree can memorise noise",
-                "Unstable – a small change in data can produce a very different tree",
-                "Biased toward features with many distinct values/levels"
-            ],
-            "correct_answer": "Fully interpretable – you can read the exact decision path",
-            "explanation": "The source material lists \"Fully interpretable — you can read the exact decision path (a “white box” model)\" as a merit of decision trees.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 8,
-            "topic": "Random Forest",
-            "difficulty": "easy",
-            "question": "Which of the following is mentioned as a merit of random forests?",
-            "options": [
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Loses the single‑tree's easy interpretability — harder to explain a prediction",
-                "Slower to train and to score than one tree (hundreds of trees)",
-                "Larger memory footprint to store the whole ensemble"
-            ],
-            "correct_answer": "Much lower variance than a single tree — far less prone to overfitting",
-            "explanation": "The source material states that a merit of random forests is \"Much lower variance than a single tree — far less prone to overfitting\".",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 9,
-            "topic": "Random Forest",
-            "difficulty": "easy",
-            "question": "Which of the following is mentioned as a merit of Random Forests?",
-            "options": [
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Loses the single-tree's easy interpretability",
-                "Slower to train and to score than one tree",
-                "Larger memory footprint to store the whole ensemble"
-            ],
-            "correct_answer": "Much lower variance than a single tree — far less prone to overfitting",
-            "explanation": "The source lists lower variance (and thus reduced overfitting) as a merit of Random Forests, while the other statements are listed as demerits.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 10,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "Which statement describes a disadvantage of decision trees according to the material?",
-            "options": [
-                "Prone to overfitting — a fully grown tree can memorise noise",
-                "Fully interpretable — you can read the exact decision path",
-                "No feature scaling or normalisation needed",
-                "Cheap and fast to train and to score new records"
-            ],
-            "correct_answer": "Prone to overfitting — a fully grown tree can memorise noise",
-            "explanation": "The source identifies overfitting as a key drawback of decision trees, whereas the other options are listed as merits.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 11,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "Which of the following statements is NOT listed as a merit of decision trees?",
-            "options": [
-                "They are fully interpretable (a “white box” model).",
-                "No feature scaling or normalisation is required.",
-                "They are prone to overfitting when fully grown.",
-                "They naturally handle both numeric and categorical features."
-            ],
-            "correct_answer": "They are prone to overfitting when fully grown.",
-            "explanation": "The source material lists ‘prone to overfitting’ under DEMERITS, not under MERITS. All other options are explicitly mentioned as merits.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 12,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "According to the source, which of the following is a disadvantage of using decision trees?",
-            "options": [
-                "They are cheap and fast to train and to score new records.",
-                "They are biased toward features with many distinct values/levels.",
-                "They require no feature scaling or normalisation.",
-                "They provide fully interpretable decision paths."
-            ],
-            "correct_answer": "They are biased toward features with many distinct values/levels.",
-            "explanation": "The source lists ‘biased toward features with many distinct values/levels’ under DEMERITS. The other options are described as merits.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 13,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "Which of the following statements about decision trees is FALSE?",
-            "options": [
-                "They are fully interpretable, allowing the exact decision path to be read.",
-                "No feature scaling or normalisation is required before training.",
-                "They are prone to overfitting when grown without restriction.",
-                "They naturally handle both numeric and categorical features."
-            ],
-            "correct_answer": "They are prone to overfitting when grown without restriction.",
-            "explanation": "The source material lists \"Prone to overfitting — a fully grown tree can memorise noise\" as a demerit, not a merit. All other statements are listed as merits.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 14,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "According to the source material, which of the following is a disadvantage of using decision trees?",
-            "options": [
-                "Cheap and fast to train and to score new records.",
-                "Biased toward features with many distinct values/levels.",
-                "Fully interpretable – the exact decision path can be read.",
-                "Naturally handles both numeric and categorical features."
-            ],
-            "correct_answer": "Biased toward features with many distinct values/levels.",
-            "explanation": "The source material lists \"Biased toward features with many distinct values/levels\" under DEMERITS. The other options are listed as merits.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 15,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "Which of the following is mentioned as a disadvantage of decision‑tree models?",
-            "options": [
-                "They are fully interpretable (white‑box).",
-                "No feature scaling or normalisation is required.",
-                "They are prone to overfitting.",
-                "They are cheap and fast to train."
-            ],
-            "correct_answer": "They are prone to overfitting.",
-            "explanation": "The source material lists “Prone to overfitting — a fully grown tree can memorise noise” under the DEMERITS of decision trees.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 16,
-            "topic": "Decision Tree",
-            "difficulty": "medium",
-            "question": "In which type of application are decision trees especially appropriate, according to the material?",
-            "options": [
-                "Any setting where a human must read and approve the model's logic.",
-                "Real‑time high‑frequency trading where millisecond latency is critical.",
-                "Image classification using deep convolutional features.",
-                "Large‑scale language modeling with billions of parameters."
-            ],
-            "correct_answer": "Any setting where a human must read and approve the model's logic.",
-            "explanation": "The source lists “Any setting where a human must read and approve the model's logic” among the APPLICATIONS for decision trees.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 17,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "Which of the following is listed as a merit of Random Forests?",
-            "options": [
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Loser interpretability — harder to explain a prediction",
-                "Slower to train and to score than one tree (hundreds of trees)",
-                "Larger memory footprint to store the whole ensemble"
-            ],
-            "correct_answer": "Much lower variance than a single tree — far less prone to overfitting",
-            "explanation": "The source material lists lower variance (and thus reduced overfitting) as a merit of Random Forests.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 18,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "Which of the following is identified as a demerit of Random Forests?",
-            "options": [
-                "Handles high-dimensional, messy, or partially missing data well",
-                "Provides a built-in feature‑importance ranking for free",
-                "Can still overfit if trees are grown too deep on noisy labels",
-                "Trees train independently — easy to parallelise across cores"
-            ],
-            "correct_answer": "Can still overfit if trees are grown too deep on noisy labels",
-            "explanation": "The source material states that Random Forests can still overfit when trees are grown too deep on noisy labels, listing this as a demerit.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 19,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "Which of the following is listed as a merit of using Random Forests?",
-            "options": [
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Loses the single-tree's easy interpretability — harder to explain a prediction",
-                "Slower to train and to score than one tree (hundreds of trees)",
-                "Larger memory footprint to store the whole ensemble"
-            ],
-            "correct_answer": "Much lower variance than a single tree — far less prone to overfitting",
-            "explanation": "The source material lists lower variance and reduced overfitting as a merit of Random Forests.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 20,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "Which of the following is identified as a drawback (demerit) of Random Forests?",
-            "options": [
-                "Handles high-dimensional, messy, or partially missing data well",
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Larger memory footprint to store the whole ensemble",
-                "Gives a built-in feature-importance ranking for free"
-            ],
-            "correct_answer": "Larger memory footprint to store the whole ensemble",
-            "explanation": "The source material cites a larger memory footprint as one of the demerits of Random Forests.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 21,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "Which of the following is listed as a merit of Random Forests?",
-            "options": [
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Higher variance than a single tree — more prone to overfitting",
-                "Requires extensive hyper‑parameter tuning to achieve good performance",
-                "Cannot handle high‑dimensional or partially missing data"
-            ],
-            "correct_answer": "Much lower variance than a single tree — far less prone to overfitting",
-            "explanation": "The source material lists this as a merit: Random Forests have much lower variance than a single tree and are far less prone to overfitting.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 22,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "According to the source, which of the following is a disadvantage of Random Forests?",
-            "options": [
-                "Los(es) the single‑tree's easy interpretability — harder to explain a prediction",
-                "Smaller memory footprint than a single decision tree",
-                "Never overfits, even when trees are grown very deep on noisy labels",
-                "Trains faster than a single decision tree"
-            ],
-            "correct_answer": "Los(es) the single‑tree's easy interpretability — harder to explain a prediction",
-            "explanation": "The source material cites loss of the single‑tree's easy interpretability as a demerit, making predictions harder to explain.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 23,
-            "topic": "Random Forest",
-            "difficulty": "medium",
-            "question": "Which of the following is listed as a demerit of Random Forests?",
-            "options": [
-                "Much lower variance than a single tree — far less prone to overfitting",
-                "Handles high-dimensional, messy, or partially missing data well",
-                "Slower to train and to score than one tree (hundreds of trees)",
-                "Gives a built-in feature‑importance ranking for free"
-            ],
-            "correct_answer": "Slower to train and to score than one tree (hundreds of trees)",
-            "explanation": "The source material lists slower training and scoring compared to a single tree as a demerit of Random Forests.",
-            "sources": [
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                },
-                {
-                    "page": "8",
-                    "score": 0.7557508429066131
-                }
-            ]
-        },
-        {
-            "question_id": 24,
-            "topic": "K-Means Clustering",
-            "difficulty": "medium",
-            "question": "What does the K‑means algorithm aim to minimize?",
-            "options": [
-                "The total within‑cluster sum of squared distances",
-                "The number of clusters",
-                "The maximum distance between any two points in a cluster",
-                "The silhouette score"
-            ],
-            "correct_answer": "The total within‑cluster sum of squared distances",
-            "explanation": "According to the source, K‑means minimizes the total within‑cluster sum of squared distances (the objective function).",
-            "sources": [
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                },
-                {
-                    "page": "9",
-                    "score": 0.7521819625226193
-                }
-            ]
-        },
-        {
-            "question_id": 25,
-            "topic": "Decision Tree",
+            "topic": "Aggregate Method in Amortized Analysis",
             "difficulty": "hard",
-            "question": "Which of the following statements describes a characteristic that decision trees do NOT possess according to the provided description?",
+            "question": "A binary counter starts at 0 and supports only an increment operation. After performing n increments, what is the amortized cost per increment using the aggregate method?",
             "options": [
-                "They are fully interpretable (a “white box” model).",
-                "They require feature scaling or normalisation.",
-                "They naturally handle both numeric and categorical features.",
-                "They are cheap and fast to train and to score new records."
+                "Θ(1)",
+                "Θ(log n)",
+                "Θ(n)",
+                "Θ(n log n)"
             ],
-            "correct_answer": "They require feature scaling or normalisation.",
-            "explanation": "The source material lists “No feature scaling or normalisation needed” as a merit of decision trees, so requiring scaling is not a characteristic they possess.",
+            "correct_answer": "Θ(1)",
+            "explanation": "Each increment may flip several bits, but the total number of bit flips over n increments is at most 2n (each bit i flips every 2^i increments). Using the aggregate method, the total cost is O(n), so the amortized cost per operation is O(n)/n = O(1).",
             "sources": [
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "102",
+                    "score": 0.7797842753062098
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "102",
+                    "score": 0.7790509462356567
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "101",
+                    "score": 0.7757694125175476
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "101",
+                    "score": 0.7734922170639038
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "108",
+                    "score": 0.7166101932525635
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "108",
+                    "score": 0.7144298979300212
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "99",
+                    "score": 0.696382999420166
                 },
                 {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 26,
-            "topic": "Decision Tree",
-            "difficulty": "hard",
-            "question": "Which of the following statements is NOT a limitation (demerit) of decision trees as described in the material?",
-            "options": [
-                "They are prone to overfitting, especially when fully grown.",
-                "They are unstable: a small change in data can produce a very different tree.",
-                "They are biased toward features with many distinct values or levels.",
-                "They are excellent at extrapolating beyond the range seen in training."
-            ],
-            "correct_answer": "They are excellent at extrapolating beyond the range seen in training.",
-            "explanation": "The source material states that decision trees are “Poor at extrapolating beyond the range seen in training (regression)”, so claiming they are excellent at extrapolation is not a listed limitation.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 27,
-            "topic": "Decision Tree",
-            "difficulty": "hard",
-            "question": "Which of the following is NOT a disadvantage of using decision trees?",
-            "options": [
-                "They are prone to overfitting when fully grown.",
-                "A small change in the training data can produce a very different tree.",
-                "They are biased toward features that have many distinct values or levels.",
-                "They require extensive feature scaling or normalisation before training."
-            ],
-            "correct_answer": "They require extensive feature scaling or normalisation before training.",
-            "explanation": "The source material lists the need for no feature scaling or normalisation as a merit, not a disadvantage. All other options are explicitly mentioned as disadvantages.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 28,
-            "topic": "Decision Tree",
-            "difficulty": "hard",
-            "question": "According to the source material, which of the following is NOT mentioned as a typical application of decision trees?",
-            "options": [
-                "Credit scoring rules",
-                "Medical triage or diagnosis checklists",
-                "Customer‑churn flagging",
-                "Image recognition tasks"
-            ],
-            "correct_answer": "Image recognition tasks",
-            "explanation": "The source material lists credit scoring, medical triage, customer‑churn flagging, and simple fraud‑alert rules as applications. Image recognition is not mentioned, making it the correct answer.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 29,
-            "topic": "Decision Tree",
-            "difficulty": "hard",
-            "question": "According to the described disadvantages of decision trees, which of the following statements is true?",
-            "options": [
-                "Decision trees are unstable: a small change in data can produce a very different tree.",
-                "Decision trees require extensive feature scaling before training.",
-                "Decision trees cannot handle categorical features.",
-                "Decision trees are computationally expensive to train and score."
-            ],
-            "correct_answer": "Decision trees are unstable: a small change in data can produce a very different tree.",
-            "explanation": "The source material lists instability – that a small change in data can produce a very different tree – as a specific disadvantage of decision trees. The other options are not mentioned as disadvantages.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                }
-            ]
-        },
-        {
-            "question_id": 30,
-            "topic": "Decision Tree",
-            "difficulty": "hard",
-            "question": "In which of the following application areas would a decision tree be most appropriate, based on the listed uses?",
-            "options": [
-                "Credit scoring rules",
-                "Real‑time video object detection",
-                "Speech‑to‑text transcription",
-                "Long‑term stock price forecasting"
-            ],
-            "correct_answer": "Credit scoring rules",
-            "explanation": "The source material cites credit scoring rules as one of the primary applications of decision trees. The other domains are not mentioned among the listed uses.",
-            "sources": [
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
-                },
-                {
-                    "page": "5",
-                    "score": 0.7366286359208022
+                    "page": "99",
+                    "score": 0.6933793242799845
                 }
             ]
         }
