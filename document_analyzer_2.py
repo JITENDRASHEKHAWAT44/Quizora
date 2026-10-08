@@ -22,12 +22,9 @@ def analyze_document():
     # Setup (lazy — only runs when called)
     # ==========================================
 
-    embed_model = HuggingFaceEmbedding(
-        model_name="Qwen/Qwen3-Embedding-0.6B",
-        trust_remote_code=True,
-        device="cuda",
-    )
+    from db_and_models import get_embedding_model, get_vector_store
 
+    embed_model, embed_dim, table_name = get_embedding_model()
     Settings.embed_model = embed_model
 
     llm = Groq(
@@ -37,15 +34,9 @@ def analyze_document():
 
     Settings.llm = llm
 
-    vector_store = PGVectorStore.from_params(
-        database="quizora",
-        host="localhost",
-        password="quizora123",
-        port=5433,
-        user="postgres",
-        table_name="QWEN_pdf_chunks",
-        embed_dim=1024,
-    )
+    vector_store = get_vector_store(table_name=table_name, embed_dim=embed_dim)
+
+
 
     index = VectorStoreIndex.from_vector_store(
         vector_store=vector_store

@@ -40,9 +40,17 @@ const state = {
    API
 ══════════════════════════════════════════════════════ */
 function apiBase() {
-  const raw = ($("#api-base")?.value ?? "").trim();
-  return raw ? raw.replace(/\/$/, "") : "";
+  const custom = ($("#api-base")?.value ?? "").trim();
+  if (custom) return custom.replace(/\/$/, "");
+
+  // If running locally, use relative path
+  if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+    return "";
+  }
+  // If deployed (e.g. on Vercel), fall back to global config or current origin
+  return (window.__QUIZORA_API_BASE__ || "").replace(/\/$/, "");
 }
+
 
 function apiUrl(path) {
   const base = apiBase();

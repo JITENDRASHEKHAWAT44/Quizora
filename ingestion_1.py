@@ -23,16 +23,12 @@ os.environ.setdefault("HF_HUB_OFFLINE", "1")
 def ingest_document(pdf_path=None):
 
     # ==========================================
-    # 1. Gemini Embedding Model
+    # 1. Embedding Model (Cloud Gemini API / Local Qwen)
     # ==========================================
 
-    embed_model = HuggingFaceEmbedding(
-        model_name="Qwen/Qwen3-Embedding-0.6B",
-        trust_remote_code=True,
-        device="cuda",
-        embed_batch_size=16,
-    )
+    from db_and_models import get_embedding_model, get_vector_store
 
+    embed_model, embed_dim, table_name = get_embedding_model()
     Settings.embed_model = embed_model
 
 
@@ -83,15 +79,8 @@ def ingest_document(pdf_path=None):
     # 4. PostgreSQL + pgvector
     # ==========================================
 
-    vector_store = PGVectorStore.from_params(
-        database="quizora",
-        host="localhost",
-        password="quizora123",
-        port=5433,
-        user="postgres",
-        table_name="QWEN_pdf_chunks",
-        embed_dim=1024,
-    )
+    vector_store = get_vector_store(table_name=table_name, embed_dim=embed_dim)
+
 
 
     # ==========================================
