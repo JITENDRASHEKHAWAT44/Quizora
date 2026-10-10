@@ -1,44 +1,39 @@
 {
     "topics": [
         {
-            "name": "Aggregate Method in Amortized Analysis",
-            "description": "Analyzing a sequence of operations (e.g., incrementing a binary counter) by computing total cost over n operations and deriving average (amortized) cost per operation.",
+            "name": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
+            "description": "Computation of node impurity using entropy, calculation of information gain for each candidate feature, and selection of the split that maximally reduces impurity. Includes the formulas Entropy(S) = −Σ pᵢ log₂(pᵢ) and Information Gain = Entropy(parent) − Σ (|child|/|parent|)·Entropy(child).",
             "importance": "high"
         },
         {
-            "name": "Potential Method for Amortized Analysis",
-            "description": "Defining a potential function to capture pre‑paid work, calculating amortized cost as actual cost plus change in potential, and applying it to data structure operations.",
-            "importance": "medium"
-        },
-        {
-            "name": "Asymptotic Notations (Big‑O, Θ, Ω)",
-            "description": "Formal definitions, interpretation of upper, tight, and lower bounds, and how to use them to classify algorithm running times.",
+            "name": "Overfitting and Pruning in Decision Trees",
+            "description": "Causes of overfitting in fully grown trees, the instability of trees to small data changes, and strategies to control tree depth, minimum sample counts, or use post‑hoc pruning to improve generalisation.",
             "importance": "high"
         },
         {
-            "name": "Growth‑Rate Comparison of Algorithms",
-            "description": "Using asymptotic notation to compare linear, quadratic, exponential, and logarithmic running times; interpreting tables that list algorithm runtimes for increasing input sizes.",
+            "name": "Random Forest Ensemble Mechanics",
+            "description": "Construction of a forest via bootstrap sampling of training rows, random selection of feature subsets at each split (typically √p), independent deep tree growth, and aggregation of predictions by majority vote (classification) or averaging (regression). Includes discussion of out‑of‑bag (OOB) samples as an internal validation set.",
             "importance": "high"
         },
         {
-            "name": "Summation Formulas for Time‑Complexity Analysis",
-            "description": "Common series such as Σ1 = n, Σi = n(n+1)/2, Σi², and geometric series; applying them to derive closed‑form bounds for loops and nested loops.",
+            "name": "Feature‑Importance Ranking in Random Forests",
+            "description": "How the ensemble provides a built‑in measure of each feature’s contribution to prediction accuracy, often derived from the decrease in impurity or permutation importance across all trees.",
             "importance": "medium"
         },
         {
-            "name": "Solving Recurrences by the Iteration (Expansion) Method",
-            "description": "Unfolding a recurrence step‑by‑step, using summation formulas to obtain a closed form, and verifying the solution with induction.",
-            "importance": "medium"
-        },
-        {
-            "name": "Master Theorem for Divide‑and‑Conquer Recurrences",
-            "description": "Identifying the parameters a, b, and f(n) in T(n)=aT(n/b)+f(n), applying the three cases of the theorem, and determining asymptotic bounds.",
-            "importance": "medium"
-        },
-        {
-            "name": "Time‑Complexity of Simple Loop Constructs",
-            "description": "Analyzing single and nested for‑loops, distinguishing between O(n), O(n²), and O(log n) patterns, and relating loop bounds to the summation formulas.",
+            "name": "K‑Means Clustering Objective and Convergence (Lloyd’s Algorithm)",
+            "description": "Iterative process of assigning points to the nearest centroid, updating centroids as the mean of assigned points, and minimizing the total within‑cluster sum of squares (WCSS). Guarantees that WCSS never increases, leading to convergence to a (possibly local) optimum.",
             "importance": "high"
+        },
+        {
+            "name": "Initialization Sensitivity and Choosing k in K‑Means",
+            "description": "Impact of random centroid initialization on final clusters, risks of poor local minima, and the need to pre‑select the number of clusters k. Highlights that k‑means does not infer k automatically and that multiple restarts or methods (e.g., elbow) are often used.",
+            "importance": "medium"
+        },
+        {
+            "name": "Model Trade‑offs: Interpretability vs. Accuracy vs. Stability",
+            "description": "Comparison of Decision Trees, Random Forests, and K‑Means across dimensions such as interpretability (high for trees, medium for forests, low for clustering), variance/overfitting risk, training speed, and suitability for different problem types (supervised vs. unsupervised).",
+            "importance": "medium"
         }
     ]
 }

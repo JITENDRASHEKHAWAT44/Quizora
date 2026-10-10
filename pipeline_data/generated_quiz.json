@@ -1,291 +1,99 @@
 {
-    "total_questions": 6,
+    "total_questions": 2,
     "questions": [
         {
             "question_id": 1,
-            "topic": "Aggregate Method in Amortized Analysis",
+            "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
             "difficulty": "easy",
-            "question": "In the aggregate method of amortized analysis, how is the amortized cost of an operation determined?",
+            "question": "What is the entropy formula for a binary classification problem with class probabilities p and (1‑p)?",
             "options": [
-                "By dividing the total cost of a sequence of operations by the number of operations in the sequence",
-                "By taking the worst‑case cost of a single operation and using it for all operations",
-                "By analyzing only the most expensive operation and ignoring the rest",
-                "By assigning zero cost to all inexpensive operations"
+                "-p · log₂(p) − (1‑p) · log₂(1‑p)",
+                "p² + (1‑p)²",
+                "-p · ln(p) − (1‑p) · ln(1‑p)",
+                "|p − 0.5| + |(1‑p) − 0.5|"
             ],
-            "correct_answer": "By dividing the total cost of a sequence of operations by the number of operations in the sequence",
-            "explanation": "The aggregate method computes the total cost of a whole sequence of operations and then averages it over the number of operations, yielding the amortized cost per operation.",
+            "correct_answer": "-p · log₂(p) − (1‑p) · log₂(1‑p)",
+            "explanation": "Entropy measures the impurity of a binary distribution and is defined as H = -p log₂ p - (1‑p) log₂ (1‑p). The other options are either Gini impurity, natural‑log entropy, or unrelated expressions.",
             "sources": [
                 {
-                    "page": "102",
-                    "score": 0.7797842753062098
+                    "page": "3",
+                    "score": 0.6765849187025488
                 },
                 {
-                    "page": "102",
-                    "score": 0.7790509462356567
+                    "page": "4",
+                    "score": 0.587629283211871
                 },
                 {
-                    "page": "101",
-                    "score": 0.7757694125175476
+                    "page": "2",
+                    "score": 0.5447572469711304
                 },
                 {
-                    "page": "101",
-                    "score": 0.7734922170639038
+                    "page": "5",
+                    "score": 0.515305772879892
                 },
                 {
-                    "page": "108",
-                    "score": 0.7166101932525635
+                    "page": "8",
+                    "score": 0.5103337320784849
                 },
                 {
-                    "page": "108",
-                    "score": 0.7144298979300212
+                    "page": "12",
+                    "score": 0.4710581302642822
                 },
                 {
-                    "page": "99",
-                    "score": 0.696382999420166
+                    "page": "13",
+                    "score": 0.4615857326039243
                 },
                 {
-                    "page": "99",
-                    "score": 0.6933793242799845
+                    "page": "1",
+                    "score": 0.43110323362927305
                 }
             ]
         },
         {
             "question_id": 2,
-            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-            "difficulty": "easy",
-            "question": "Which asymptotic notation provides an upper bound on the growth rate of a function?",
-            "options": [
-                "Big O (O)",
-                "Omega (Ω)",
-                "Theta (Θ)",
-                "Little‑o (o)"
-            ],
-            "correct_answer": "Big O (O)",
-            "explanation": "Big O notation describes an upper bound, meaning the function grows no faster than the given rate up to constant factors for sufficiently large inputs.",
-            "sources": [
-                {
-                    "page": "13",
-                    "score": 0.6888062543388466
-                },
-                {
-                    "page": "13",
-                    "score": 0.6880428380940665
-                },
-                {
-                    "page": "19",
-                    "score": 0.6661173900295871
-                },
-                {
-                    "page": "19",
-                    "score": 0.6648379564285326
-                },
-                {
-                    "page": "18",
-                    "score": 0.6539174524594883
-                },
-                {
-                    "page": "18",
-                    "score": 0.6529210416721688
-                },
-                {
-                    "page": "20",
-                    "score": 0.6473775506019638
-                },
-                {
-                    "page": "20",
-                    "score": 0.6388128615133261
-                }
-            ]
-        },
-        {
-            "question_id": 3,
-            "topic": "Aggregate Method in Amortized Analysis",
+            "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
             "difficulty": "medium",
-            "question": "Using the aggregate method, a binary counter is incremented n times starting from zero. The total number of bit flips over the n increments is at most 2n. What is the amortized cost per increment operation?",
+            "question": "For a training set of 8 loan records (5 defaults, 3 non‑defaults), splitting on the feature \"Credit History\" (Good vs Bad) yields groups with entropies 0.811 and 0 respectively. What is the information gain of this split?",
             "options": [
-                "Θ(1) (constant time)",
-                "Θ(log n) (logarithmic time)",
-                "Θ(n) (linear time)",
-                "Θ(n log n) (n log n time)"
+                "0.549",
+                "0.406",
+                "0.954",
+                "0.049"
             ],
-            "correct_answer": "Θ(1) (constant time)",
-            "explanation": "The aggregate method computes the total cost of a sequence of operations and divides by the number of operations. Here the total number of bit flips for n increments is ≤ 2n, so the amortized cost per increment is (2n)/n = 2 = Θ(1).",
+            "correct_answer": "0.549",
+            "explanation": "Overall entropy H(S) = 0.954. Weighted entropy after the split = (4/8)·0.811 + (4/8)·0 = 0.406. Information gain = 0.954 − 0.406 = 0.548 ≈ 0.549. The other numbers correspond to intermediate or unrelated calculations.",
             "sources": [
-                {
-                    "page": "102",
-                    "score": 0.7797842753062098
-                },
-                {
-                    "page": "102",
-                    "score": 0.7790509462356567
-                },
-                {
-                    "page": "101",
-                    "score": 0.7757694125175476
-                },
-                {
-                    "page": "101",
-                    "score": 0.7734922170639038
-                },
-                {
-                    "page": "108",
-                    "score": 0.7166101932525635
-                },
-                {
-                    "page": "108",
-                    "score": 0.7144298979300212
-                },
-                {
-                    "page": "99",
-                    "score": 0.696382999420166
-                },
-                {
-                    "page": "99",
-                    "score": 0.6933793242799845
-                }
-            ]
-        },
-        {
-            "question_id": 4,
-            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-            "difficulty": "medium",
-            "question": "Given the functions f(n) = 3n + 5 and g(n) = n², which of the following statements correctly describes their asymptotic relationship?",
-            "options": [
-                "f(n) = O(g(n)) but f(n) ≠ Ω(g(n))",
-                "f(n) = Ω(g(n)) but f(n) ≠ O(g(n))",
-                "f(n) = Θ(g(n))",
-                "g(n) = O(f(n))"
-            ],
-            "correct_answer": "f(n) = O(g(n)) but f(n) ≠ Ω(g(n))",
-            "explanation": "Since n² grows faster than any linear function, 3n+5 is bounded above by a constant multiple of n² for sufficiently large n, so f(n) = O(g(n)). However, f(n) is not a lower bound for g(n); g(n) is not bounded above by a constant multiple of f(n), so f(n) ≠ Ω(g(n)). Therefore the correct relationship is f(n) = O(g(n)) but not Ω(g(n)).",
-            "sources": [
-                {
-                    "page": "13",
-                    "score": 0.6888062543388466
-                },
-                {
-                    "page": "13",
-                    "score": 0.6880428380940665
-                },
-                {
-                    "page": "19",
-                    "score": 0.6661173900295871
-                },
-                {
-                    "page": "19",
-                    "score": 0.6648379564285326
-                },
-                {
-                    "page": "18",
-                    "score": 0.6539174524594883
-                },
-                {
-                    "page": "18",
-                    "score": 0.6529210416721688
-                },
-                {
-                    "page": "20",
-                    "score": 0.6473775506019638
-                },
-                {
-                    "page": "20",
-                    "score": 0.6388128615133261
-                }
-            ]
-        },
-        {
-            "question_id": 5,
-            "topic": "Growth‑Rate Comparison of Algorithms",
-            "difficulty": "medium",
-            "question": "Which of the following algorithms has the highest asymptotic worst‑case time complexity?",
-            "options": [
-                "Floyd‑Warshall algorithm – O(n³)",
-                "Strassen's matrix multiplication – O(n²·⁸¹)",
-                "Huffman coding – O(n log n)",
-                "Binary search – O(log n)"
-            ],
-            "correct_answer": "Floyd‑Warshall algorithm – O(n³)",
-            "explanation": "In the worst case, Floyd‑Warshall runs in Θ(n³) time, which grows faster than Θ(n²·⁸¹) (Strassen), Θ(n log n) (Huffman), and Θ(log n) (binary search). Therefore it has the highest asymptotic worst‑case complexity among the listed algorithms.",
-            "sources": [
-                {
-                    "page": "4",
-                    "score": 0.5534259347065736
-                },
-                {
-                    "page": "13",
-                    "score": 0.5528863338895847
-                },
-                {
-                    "page": "13",
-                    "score": 0.5517952113273623
-                },
-                {
-                    "page": "4",
-                    "score": 0.5512898831790765
-                },
-                {
-                    "page": "4",
-                    "score": 0.5479389641394093
-                },
                 {
                     "page": "3",
-                    "score": 0.538357908921491
+                    "score": 0.6765849187025488
                 },
                 {
-                    "page": "23",
-                    "score": 0.5381104625397655
+                    "page": "4",
+                    "score": 0.587629283211871
                 },
                 {
-                    "page": "3",
-                    "score": 0.5366857008116602
-                }
-            ]
-        },
-        {
-            "question_id": 6,
-            "topic": "Aggregate Method in Amortized Analysis",
-            "difficulty": "hard",
-            "question": "A binary counter starts at 0 and supports only an increment operation. After performing n increments, what is the amortized cost per increment using the aggregate method?",
-            "options": [
-                "Θ(1)",
-                "Θ(log n)",
-                "Θ(n)",
-                "Θ(n log n)"
-            ],
-            "correct_answer": "Θ(1)",
-            "explanation": "Each increment may flip several bits, but the total number of bit flips over n increments is at most 2n (each bit i flips every 2^i increments). Using the aggregate method, the total cost is O(n), so the amortized cost per operation is O(n)/n = O(1).",
-            "sources": [
-                {
-                    "page": "102",
-                    "score": 0.7797842753062098
+                    "page": "2",
+                    "score": 0.5447572469711304
                 },
                 {
-                    "page": "102",
-                    "score": 0.7790509462356567
+                    "page": "5",
+                    "score": 0.515305772879892
                 },
                 {
-                    "page": "101",
-                    "score": 0.7757694125175476
+                    "page": "8",
+                    "score": 0.5103337320784849
                 },
                 {
-                    "page": "101",
-                    "score": 0.7734922170639038
+                    "page": "12",
+                    "score": 0.4710581302642822
                 },
                 {
-                    "page": "108",
-                    "score": 0.7166101932525635
+                    "page": "13",
+                    "score": 0.4615857326039243
                 },
                 {
-                    "page": "108",
-                    "score": 0.7144298979300212
-                },
-                {
-                    "page": "99",
-                    "score": 0.696382999420166
-                },
-                {
-                    "page": "99",
-                    "score": 0.6933793242799845
+                    "page": "1",
+                    "score": 0.43110323362927305
                 }
             ]
         }

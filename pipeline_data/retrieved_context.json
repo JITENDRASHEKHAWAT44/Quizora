@@ -1,812 +1,272 @@
 {
-    "total_questions": 6,
+    "total_questions": 2,
     "questions": [
         {
             "question_id": 1,
-            "topic": "Aggregate Method in Amortized Analysis",
+            "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
             "difficulty": "easy",
             "sources": [
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "Amortized Analysis - Example",
-                    "score": 0.7797842753062098,
+                    "text": "DECISION TREE · MECHANICS\nHow a Decision Tree Splits Data\n1 Start with all training examples sitting at the root node.\n2 For every candidate feature, measure how ‘impure’ (mixed) the resulting groups would \nbe.\n3 Pick the split that gains the most information — i.e. cuts impurity the most.\n4 Repeat this process inside each child node, recursively.\n5 Stop at a max depth / min sample count, or when a node is pure — that node becomes \na leaf that predicts the majority class.\nEntropy(S) = −Σ pᵢ log₂(pᵢ)      Information Gain = Entropy(parent) − \nΣ (|child|/|parent|)·Entropy(child)\nCredit History?\nGood Bad\nMostly\nNo Default\n(1/4 default)\nAll Default\n(4/4 default)\n→ pure leaf\nFull calculation on the next slide →\nSUPERVISED LEARNING 03 / 13",
+                    "score": 0.6765849187025488,
                     "metadata": {
-                        "page_label": "102",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "3",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "Amortized Analysis - Example",
-                    "score": 0.7790509462356567,
+                    "text": "DECISION TREE · WORKED EXAMPLE\nChoosing the Root Split — Loan Default Data\n# Income Credit History Default?\n1 High Good No\n2 High Good No\n3 High Bad Yes\n4 Low Good No\n5 Low Good Yes\n6 Low Bad Yes\n7 Low Bad Yes\n8 High Bad Yes\nStep 1 — Overall entropy (5 Yes / 3 No)\nEntropy(S) = −(5/8)log₂(5/8) − (3/8)log₂(3/8) = 0.424 + 0.531 = 0.954\nStep 2 — Split on Credit History (Good / Bad)\nGood (4): 1 Yes / 3 No → entropy = 0.811      Bad (4): 4 Yes / 0 No → entropy = 0\nWeighted entropy = (4/8)(0.811) + (4/8)(0) = 0.406      →  IG = 0.954 − 0.406 = 0.549\nStep 3 — Split on Income (High / Low)\nHigh (4): 2 Yes / 2 No → entropy = 1.000      Low (4): 3 Yes / 1 No → entropy = 0.811\nWeighted entropy = (4/8)(1.000) + (4/8)(0.811) = 0.906      →  IG = 0.954 − 0.906 = 0.049\nCredit History Income\n-0.05\n0.05\n0.15\n0.25\n0.35\n0.45\n0.55\n0.65 0.549\n0.049\nInformation Gain by Feature Verdict\nCredit History gives over 11× the \ninformation gain of Income — the tree \npicks it as the root split.\nSUPERVISED LEARNING 04 / 13",
+                    "score": 0.587629283211871,
                     "metadata": {
-                        "page_label": "102",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "4",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "Amortized Analysis",
-                    "score": 0.7757694125175476,
+                    "text": "ROADMAP\nWhat We’ll Cover\n1\nDecision Tree\nA single tree that splits data by asking the question that separates classes best.\n2\nRandom Forest\nHundreds of independent trees, each trained on a random slice of the data, voting together.\n3\nK-Means Clustering\nNo labels needed — the algorithm groups similar points together by repeatedly moving toward the nearest centroid.\nEach section covers: how the model works → a worked example with real numbers → applications, merits & demerits.\nSUPERVISED & UNSUPERVISED LEARNING 02 / 13",
+                    "score": 0.5447572469711304,
                     "metadata": {
-                        "page_label": "101",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "2",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "Amortized Analysis",
-                    "score": 0.7734922170639038,
+                    "text": "DECISION TREE · IN PRACTICE\nWhere It's Used — and Its Trade-offs\nAPPLICATIONS\nCredit scoring rules · Medical triage / diagnosis checklists · Customer-churn flagging · Simple fraud-alert rules · Any setting where a human must read and \napprove the model's logic\nMERITS\n✓ Fully interpretable — you can read the exact decision path (a “white box” \nmodel)\n✓ No feature scaling or normalisation needed\n✓ Naturally handles both numeric and categorical features\n✓ Cheap and fast to train and to score new records\nDEMERITS\n✗ Prone to overfitting — a fully grown tree can memorise noise\n✗ Unstable: a small change in data can produce a very different tree\n✗ Biased toward features with many distinct values/levels\n✗ Poor at extrapolating beyond the range seen in training (regression)\nSUPERVISED LEARNING 05 / 13",
+                    "score": 0.515305772879892,
                     "metadata": {
-                        "page_label": "101",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "5",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "0\nCounter value [7] [6] [5] [4] [3] [2] [1] [0] Incre. cost Total cost\n0 0 0 0 1 0 1\n0 0 0 0 1 0 1\n0 0 0 0 0 1 1 0\n0 0 0 0 1\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1\n0 0 0 0 0 1 0 0\n0 0 0 0 0 1 1\n0 0 0 0 0 0 0\n0 0 0 0 0 0 1\n0 0 0 0 0 0 0\n9\n10\n6\n7\n8\n3\n4\n5\n0\n1\n2\n1\n2\n2\n1\n4\n1\n3\n1\n1\n2\n16\n18\n10\n11\n15\n4\n7\n8\n1\n3\n0 0 0 0 1 0 111 1 19\n0\n0\n1\n10\n0\n110\n0\n1\n0\nAmortized Analysis - Example",
-                    "score": 0.7166101932525635,
+                    "text": "RANDOM FOREST · IN PRACTICE\nWhere It's Used — and Its Trade-offs\nAPPLICATIONS\nFraud & anomaly detection · Satellite / land-cover classification · Feature-importance ranking in genomics · Recommendation pre-filtering · Any tabular \nproblem needing solid accuracy without heavy tuning\nMERITS\n✓ Much lower variance than a single tree — far less prone to overfitting\n✓ Handles high-dimensional, messy, or partially missing data well\n✓ Gives a built-in feature-importance ranking for free\n✓ Trees train independently — easy to parallelise across cores\nDEMERITS\n✗ Loses the single-tree's easy interpretability — harder to explain a \nprediction\n✗ Slower to train and to score than one tree (hundreds of trees)\n✗ Larger memory footprint to store the whole ensemble\n✗ Can still overfit if trees are grown too deep on noisy labels\nSUPERVISED LEARNING 08 / 13",
+                    "score": 0.5103337320784849,
                     "metadata": {
-                        "page_label": "108",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "8",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "0\nCounter value [7] [6] [5] [4] [3] [2] [1] [0] Incre. cost Total cost\n0 0 0 0 1 0 1\n0 0 0 0 1 0 1\n0 0 0 0 0 1 1 0\n0 0 0 0 1\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1\n0 0 0 0 0 1 0 0\n0 0 0 0 0 1 1\n0 0 0 0 0 0 0\n0 0 0 0 0 0 1\n0 0 0 0 0 0 0\n9\n10\n6\n7\n8\n3\n4\n5\n0\n1\n2\n1\n2\n2\n1\n4\n1\n3\n1\n1\n2\n16\n18\n10\n11\n15\n4\n7\n8\n1\n3\n0 0 0 0 1 0 111 1 19\n0\n0\n1\n10\n0\n110\n0\n1\n0\nAmortized Analysis - Example",
-                    "score": 0.7144298979300212,
+                    "text": "SIDE BY SIDE\nHow the Three Models Compare\nAspect Decision Tree Random Forest K-Means Clustering\nLearning type Supervised Supervised Unsupervised\nCore mechanism Splits on the feature that gains the most \ninformation Bags many trees and lets them vote / average Assigns points to the nearest of k centroids\nPrimarily optimizes Information gain per split Variance (via averaging) Within-cluster sum of squares\nInterpretability High — readable rules Medium — needs importance plots Medium — visualize clusters, inspect centroids\nTraining speed Fast Moderate, parallelisable Fast, but repeats over all points each iteration\nKey risk High if unpruned Lower, self-averaging Sensitive to k and to starting centroids\nRule of thumb: start with a single tree to understand the data, move to a Random Forest for a robust supervised baseline, and reach for K-Means when you have no labels and want \nto discover structure in the data itself.\nSUPERVISED & UNSUPERVISED LEARNING 12 / 13",
+                    "score": 0.4710581302642822,
                     "metadata": {
-                        "page_label": "108",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "12",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "AMORTIZED ANALYSIS",
-                    "score": 0.696382999420166,
+                    "text": "KEY TAKEAWAYS\nIt's a Trade-off, Not a Ranking\n1 Decision Tree\nThe building block. Fast and fully interpretable, but a single tree is unstable and overfits easily on its own.\n2 Random Forest\nTrades a little interpretability for stability — bagging many independent trees averages away their individual noise.\n3 K-Means Clustering\nA different kind of tool entirely — no labels needed, just groups points by proximity to find structure you didn't know to look for.\nChoose based on what the problem needs most: a readable rule, a stable baseline, or hidden structure in unlabeled data.",
+                    "score": 0.4615857326039243,
                     "metadata": {
-                        "page_label": "99",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "13",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
                     "question_id": 1,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "easy",
-                    "text": "AMORTIZED ANALYSIS",
-                    "score": 0.6933793242799845,
+                    "text": "A HANDS-ON WALKTHROUGH\nDecision Trees, Random Forests\n& K-Means Clustering\nThree foundational machine learning models, explained the way they actually work — with the \nmath worked out by hand.\nDT\nDecision Tree\nRF\nRandom Forest\nKM\nK-Means Clustering\nModel Mechanics  ·  Worked Calculations  ·  Real-World Applications  ·  Trade-offs",
+                    "score": 0.43110323362927305,
                     "metadata": {
-                        "page_label": "99",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "1",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 }
             ]
         },
         {
             "question_id": 2,
-            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-            "difficulty": "easy",
-            "sources": [
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations\n Asymptotic Notations (Big O, θ - Theta and Ω - Omega) allow us to\nanalyze an algorithm’srunning time.\n Asymptotic notation is a shorthand way to represent the time\ncomplexity.\n This is also known as an algorithm’sgrowth rate.\n Asymptotic Notations are used,\n1. Tocharacterize the complexity of an algorithm.\n2. To compare the performance of two or more algorithms solving\nthe same problem.",
-                    "score": 0.6888062543388466,
-                    "metadata": {
-                        "page_label": "13",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations\n Asymptotic Notations (Big O, θ - Theta and Ω - Omega) allow us to\nanalyze an algorithm’srunning time.\n Asymptotic notation is a shorthand way to represent the time\ncomplexity.\n This is also known as an algorithm’sgrowth rate.\n Asymptotic Notations are used,\n1. Tocharacterize the complexity of an algorithm.\n2. To compare the performance of two or more algorithms solving\nthe same problem.",
-                    "score": 0.6880428380940665,
-                    "metadata": {
-                        "page_label": "13",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations - Example\n1\n2\n3\n4\n5\n6\n7\n1\n4\n9\n16\n25\n36\n49\n2\n4\n8\n16\n32\n64\n128\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time",
-                    "score": 0.6661173900295871,
-                    "metadata": {
-                        "page_label": "19",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations - Example\n1\n2\n3\n4\n5\n6\n7\n1\n4\n9\n16\n25\n36\n49\n2\n4\n8\n16\n32\n64\n128\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time",
-                    "score": 0.6648379564285326,
-                    "metadata": {
-                        "page_label": "19",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations - Example\n1 1 1\n2 4 2\n3 9 3\n4 16 4\n5 25 5\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\n1 1 1\n2 2 4\n3 3 9\n4 4 16\n5 5 25",
-                    "score": 0.6539174524594883,
-                    "metadata": {
-                        "page_label": "18",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations - Example\n1 1 1\n2 4 2\n3 9 3\n4 16 4\n5 25 5\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\n1 1 1\n2 2 4\n3 3 9\n4 4 16\n5 5 25",
-                    "score": 0.6529210416721688,
-                    "metadata": {
-                        "page_label": "18",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations - Example\nf(n)=30n+8\nIncreasing n \ng (n)=n2+1\nValue of function ",
-                    "score": 0.6473775506019638,
-                    "metadata": {
-                        "page_label": "20",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 2,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "easy",
-                    "text": "Asymptotic Notations - Example\nf(n)=30n+8\nIncreasing n \ng (n)=n2+1\nValue of function ",
-                    "score": 0.6388128615133261,
-                    "metadata": {
-                        "page_label": "20",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                }
-            ]
-        },
-        {
-            "question_id": 3,
-            "topic": "Aggregate Method in Amortized Analysis",
+            "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
             "difficulty": "medium",
             "sources": [
                 {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "medium",
-                    "text": "Amortized Analysis - Example",
-                    "score": 0.7797842753062098,
-                    "metadata": {
-                        "page_label": "102",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "Amortized Analysis - Example",
-                    "score": 0.7790509462356567,
-                    "metadata": {
-                        "page_label": "102",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "Amortized Analysis",
-                    "score": 0.7757694125175476,
-                    "metadata": {
-                        "page_label": "101",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "Amortized Analysis",
-                    "score": 0.7734922170639038,
-                    "metadata": {
-                        "page_label": "101",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "0\nCounter value [7] [6] [5] [4] [3] [2] [1] [0] Incre. cost Total cost\n0 0 0 0 1 0 1\n0 0 0 0 1 0 1\n0 0 0 0 0 1 1 0\n0 0 0 0 1\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1\n0 0 0 0 0 1 0 0\n0 0 0 0 0 1 1\n0 0 0 0 0 0 0\n0 0 0 0 0 0 1\n0 0 0 0 0 0 0\n9\n10\n6\n7\n8\n3\n4\n5\n0\n1\n2\n1\n2\n2\n1\n4\n1\n3\n1\n1\n2\n16\n18\n10\n11\n15\n4\n7\n8\n1\n3\n0 0 0 0 1 0 111 1 19\n0\n0\n1\n10\n0\n110\n0\n1\n0\nAmortized Analysis - Example",
-                    "score": 0.7166101932525635,
-                    "metadata": {
-                        "page_label": "108",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "0\nCounter value [7] [6] [5] [4] [3] [2] [1] [0] Incre. cost Total cost\n0 0 0 0 1 0 1\n0 0 0 0 1 0 1\n0 0 0 0 0 1 1 0\n0 0 0 0 1\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1\n0 0 0 0 0 1 0 0\n0 0 0 0 0 1 1\n0 0 0 0 0 0 0\n0 0 0 0 0 0 1\n0 0 0 0 0 0 0\n9\n10\n6\n7\n8\n3\n4\n5\n0\n1\n2\n1\n2\n2\n1\n4\n1\n3\n1\n1\n2\n16\n18\n10\n11\n15\n4\n7\n8\n1\n3\n0 0 0 0 1 0 111 1 19\n0\n0\n1\n10\n0\n110\n0\n1\n0\nAmortized Analysis - Example",
-                    "score": 0.7144298979300212,
-                    "metadata": {
-                        "page_label": "108",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "AMORTIZED ANALYSIS",
-                    "score": 0.696382999420166,
-                    "metadata": {
-                        "page_label": "99",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 3,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "medium",
-                    "text": "AMORTIZED ANALYSIS",
-                    "score": 0.6933793242799845,
-                    "metadata": {
-                        "page_label": "99",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                }
-            ]
-        },
-        {
-            "question_id": 4,
-            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-            "difficulty": "medium",
-            "sources": [
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations\n Asymptotic Notations (Big O, θ - Theta and Ω - Omega) allow us to\nanalyze an algorithm’srunning time.\n Asymptotic notation is a shorthand way to represent the time\ncomplexity.\n This is also known as an algorithm’sgrowth rate.\n Asymptotic Notations are used,\n1. Tocharacterize the complexity of an algorithm.\n2. To compare the performance of two or more algorithms solving\nthe same problem.",
-                    "score": 0.6888062543388466,
-                    "metadata": {
-                        "page_label": "13",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations\n Asymptotic Notations (Big O, θ - Theta and Ω - Omega) allow us to\nanalyze an algorithm’srunning time.\n Asymptotic notation is a shorthand way to represent the time\ncomplexity.\n This is also known as an algorithm’sgrowth rate.\n Asymptotic Notations are used,\n1. Tocharacterize the complexity of an algorithm.\n2. To compare the performance of two or more algorithms solving\nthe same problem.",
-                    "score": 0.6880428380940665,
-                    "metadata": {
-                        "page_label": "13",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations - Example\n1\n2\n3\n4\n5\n6\n7\n1\n4\n9\n16\n25\n36\n49\n2\n4\n8\n16\n32\n64\n128\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time",
-                    "score": 0.6661173900295871,
-                    "metadata": {
-                        "page_label": "19",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations - Example\n1\n2\n3\n4\n5\n6\n7\n1\n4\n9\n16\n25\n36\n49\n2\n4\n8\n16\n32\n64\n128\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time",
-                    "score": 0.6648379564285326,
-                    "metadata": {
-                        "page_label": "19",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations - Example\n1 1 1\n2 4 2\n3 9 3\n4 16 4\n5 25 5\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\n1 1 1\n2 2 4\n3 3 9\n4 4 16\n5 5 25",
-                    "score": 0.6539174524594883,
-                    "metadata": {
-                        "page_label": "18",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations - Example\n1 1 1\n2 4 2\n3 9 3\n4 16 4\n5 25 5\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\nAlgo. 1 \nrunning time\nAlgo. 2 \nrunning time\n1 1 1\n2 2 4\n3 3 9\n4 4 16\n5 5 25",
-                    "score": 0.6529210416721688,
-                    "metadata": {
-                        "page_label": "18",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations - Example\nf(n)=30n+8\nIncreasing n \ng (n)=n2+1\nValue of function ",
-                    "score": 0.6473775506019638,
-                    "metadata": {
-                        "page_label": "20",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 4,
-                    "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations - Example\nf(n)=30n+8\nIncreasing n \ng (n)=n2+1\nValue of function ",
-                    "score": 0.6388128615133261,
-                    "metadata": {
-                        "page_label": "20",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                }
-            ]
-        },
-        {
-            "question_id": 5,
-            "topic": "Growth‑Rate Comparison of Algorithms",
-            "difficulty": "medium",
-            "sources": [
-                {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
-                    "difficulty": "medium",
-                    "text": "Average Case: O(log n) \nWorst Case: O(log n) \n \nGreedy Algorithms \n1. Fractional Knapsack Problem \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n2. Huffman Coding \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n \nOther Algorithms \n1. Floyd-Warshall Algorithm \nBest Case: O(n³) \nAverage Case: O(n³) \nWorst Case: O(n³) \n2. Strassen's Matrix Multiplication \nBest Case: O(n².81) \nAverage Case: O(n².81) \nWorst Case: O(n².81)",
-                    "score": 0.5534259347065736,
-                    "metadata": {
-                        "page_label": "4",
-                        "file_name": "0e5f1b341eac_ADA - Time Complexity of All Topics.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\0e5f1b341eac_ADA - Time Complexity of All Topics.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 122969,
-                        "creation_date": "2026-10-06",
-                        "last_modified_date": "2026-10-06"
-                    }
-                },
-                {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations\n Asymptotic Notations (Big O, θ - Theta and Ω - Omega) allow us to\nanalyze an algorithm’srunning time.\n Asymptotic notation is a shorthand way to represent the time\ncomplexity.\n This is also known as an algorithm’sgrowth rate.\n Asymptotic Notations are used,\n1. Tocharacterize the complexity of an algorithm.\n2. To compare the performance of two or more algorithms solving\nthe same problem.",
-                    "score": 0.5528863338895847,
-                    "metadata": {
-                        "page_label": "13",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
-                    "difficulty": "medium",
-                    "text": "Asymptotic Notations\n Asymptotic Notations (Big O, θ - Theta and Ω - Omega) allow us to\nanalyze an algorithm’srunning time.\n Asymptotic notation is a shorthand way to represent the time\ncomplexity.\n This is also known as an algorithm’sgrowth rate.\n Asymptotic Notations are used,\n1. Tocharacterize the complexity of an algorithm.\n2. To compare the performance of two or more algorithms solving\nthe same problem.",
-                    "score": 0.5517952113273623,
-                    "metadata": {
-                        "page_label": "13",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
-                    "difficulty": "medium",
-                    "text": "Average Case: O(log n) \nWorst Case: O(log n) \n \nGreedy Algorithms \n1. Fractional Knapsack Problem \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n2. Huffman Coding \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n \nOther Algorithms \n1. Floyd-Warshall Algorithm \nBest Case: O(n³) \nAverage Case: O(n³) \nWorst Case: O(n³) \n2. Strassen's Matrix Multiplication \nBest Case: O(n².81) \nAverage Case: O(n².81) \nWorst Case: O(n².81)",
-                    "score": 0.5512898831790765,
-                    "metadata": {
-                        "page_label": "4",
-                        "file_name": "3a5490c6f52c_ADA - Time Complexity of All Topics.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\3a5490c6f52c_ADA - Time Complexity of All Topics.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 122969,
-                        "creation_date": "2026-10-06",
-                        "last_modified_date": "2026-10-06"
-                    }
-                },
-                {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
-                    "difficulty": "medium",
-                    "text": "Average Case: O(log n) \nWorst Case: O(log n) \n \nGreedy Algorithms \n1. Fractional Knapsack Problem \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n2. Huffman Coding \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n \nOther Algorithms \n1. Floyd-Warshall Algorithm \nBest Case: O(n³) \nAverage Case: O(n³) \nWorst Case: O(n³) \n2. Strassen's Matrix Multiplication \nBest Case: O(n².81) \nAverage Case: O(n².81) \nWorst Case: O(n².81)",
-                    "score": 0.5479389641394093,
-                    "metadata": {
-                        "page_label": "4",
-                        "file_name": "294400863270_ADA - Time Complexity of All Topics.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\294400863270_ADA - Time Complexity of All Topics.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 122969,
-                        "creation_date": "2026-10-06",
-                        "last_modified_date": "2026-10-06"
-                    }
-                },
-                {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
-                    "difficulty": "medium",
-                    "text": "Graph Algorithms \n1. Breadth-First Search (BFS) \nBest Case: O(V + E) \nAverage Case: O(V + E) \nWorst Case: O(V + E) \n2. Depth-First Search (DFS) \nBest Case: O(V + E) \nAverage Case: O(V + E) \nWorst Case: O(V + E) \n3. Dijkstra's Algorithm \nBest Case: O(E + V log V) \nAverage Case: O(E + V log V) \nWorst Case: O(E + V log V) \n \nDynamic Programming \n1. Fibonacci Sequence \nBest Case: O(1) \nAverage Case: O(n) \nWorst Case: O(n) \n2. Knapsack Problem \nBest Case: O(Wn) \nAverage Case: O(Wn) \nWorst Case: O(Wn) \n3. Longest Common Subsequence (LCS) \nBest Case: O(n * m) \nAverage Case: O(n * m) \nWorst Case: O(n * m) \n4. Matrix Chain Multiplication \nBest Case: O(n³) \nAverage Case: O(n³) \nWorst Case: O(n³) \n \nDivide and Conquer Algorithms \n1. Merge Sort \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n2. Quick Sort \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n²) \n3. Binary Search \nBest Case: O(1)",
-                    "score": 0.538357908921491,
+                    "text": "DECISION TREE · MECHANICS\nHow a Decision Tree Splits Data\n1 Start with all training examples sitting at the root node.\n2 For every candidate feature, measure how ‘impure’ (mixed) the resulting groups would \nbe.\n3 Pick the split that gains the most information — i.e. cuts impurity the most.\n4 Repeat this process inside each child node, recursively.\n5 Stop at a max depth / min sample count, or when a node is pure — that node becomes \na leaf that predicts the majority class.\nEntropy(S) = −Σ pᵢ log₂(pᵢ)      Information Gain = Entropy(parent) − \nΣ (|child|/|parent|)·Entropy(child)\nCredit History?\nGood Bad\nMostly\nNo Default\n(1/4 default)\nAll Default\n(4/4 default)\n→ pure leaf\nFull calculation on the next slide →\nSUPERVISED LEARNING 03 / 13",
+                    "score": 0.6765849187025488,
                     "metadata": {
                         "page_label": "3",
-                        "file_name": "0e5f1b341eac_ADA - Time Complexity of All Topics.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\0e5f1b341eac_ADA - Time Complexity of All Topics.pdf",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 122969,
-                        "creation_date": "2026-10-06",
-                        "last_modified_date": "2026-10-06"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "medium",
-                    "text": "Growth of Function\nNegligible",
-                    "score": 0.5381104625397655,
+                    "text": "DECISION TREE · WORKED EXAMPLE\nChoosing the Root Split — Loan Default Data\n# Income Credit History Default?\n1 High Good No\n2 High Good No\n3 High Bad Yes\n4 Low Good No\n5 Low Good Yes\n6 Low Bad Yes\n7 Low Bad Yes\n8 High Bad Yes\nStep 1 — Overall entropy (5 Yes / 3 No)\nEntropy(S) = −(5/8)log₂(5/8) − (3/8)log₂(3/8) = 0.424 + 0.531 = 0.954\nStep 2 — Split on Credit History (Good / Bad)\nGood (4): 1 Yes / 3 No → entropy = 0.811      Bad (4): 4 Yes / 0 No → entropy = 0\nWeighted entropy = (4/8)(0.811) + (4/8)(0) = 0.406      →  IG = 0.954 − 0.406 = 0.549\nStep 3 — Split on Income (High / Low)\nHigh (4): 2 Yes / 2 No → entropy = 1.000      Low (4): 3 Yes / 1 No → entropy = 0.811\nWeighted entropy = (4/8)(1.000) + (4/8)(0.811) = 0.906      →  IG = 0.954 − 0.906 = 0.049\nCredit History Income\n-0.05\n0.05\n0.15\n0.25\n0.35\n0.45\n0.55\n0.65 0.549\n0.049\nInformation Gain by Feature Verdict\nCredit History gives over 11× the \ninformation gain of Income — the tree \npicks it as the root split.\nSUPERVISED LEARNING 04 / 13",
+                    "score": 0.587629283211871,
                     "metadata": {
-                        "page_label": "23",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "4",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 5,
-                    "topic": "Growth‑Rate Comparison of Algorithms",
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                     "difficulty": "medium",
-                    "text": "Graph Algorithms \n1. Breadth-First Search (BFS) \nBest Case: O(V + E) \nAverage Case: O(V + E) \nWorst Case: O(V + E) \n2. Depth-First Search (DFS) \nBest Case: O(V + E) \nAverage Case: O(V + E) \nWorst Case: O(V + E) \n3. Dijkstra's Algorithm \nBest Case: O(E + V log V) \nAverage Case: O(E + V log V) \nWorst Case: O(E + V log V) \n \nDynamic Programming \n1. Fibonacci Sequence \nBest Case: O(1) \nAverage Case: O(n) \nWorst Case: O(n) \n2. Knapsack Problem \nBest Case: O(Wn) \nAverage Case: O(Wn) \nWorst Case: O(Wn) \n3. Longest Common Subsequence (LCS) \nBest Case: O(n * m) \nAverage Case: O(n * m) \nWorst Case: O(n * m) \n4. Matrix Chain Multiplication \nBest Case: O(n³) \nAverage Case: O(n³) \nWorst Case: O(n³) \n \nDivide and Conquer Algorithms \n1. Merge Sort \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n log n) \n2. Quick Sort \nBest Case: O(n log n) \nAverage Case: O(n log n) \nWorst Case: O(n²) \n3. Binary Search \nBest Case: O(1)",
-                    "score": 0.5366857008116602,
+                    "text": "ROADMAP\nWhat We’ll Cover\n1\nDecision Tree\nA single tree that splits data by asking the question that separates classes best.\n2\nRandom Forest\nHundreds of independent trees, each trained on a random slice of the data, voting together.\n3\nK-Means Clustering\nNo labels needed — the algorithm groups similar points together by repeatedly moving toward the nearest centroid.\nEach section covers: how the model works → a worked example with real numbers → applications, merits & demerits.\nSUPERVISED & UNSUPERVISED LEARNING 02 / 13",
+                    "score": 0.5447572469711304,
                     "metadata": {
-                        "page_label": "3",
-                        "file_name": "3a5490c6f52c_ADA - Time Complexity of All Topics.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\3a5490c6f52c_ADA - Time Complexity of All Topics.pdf",
+                        "page_label": "2",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 122969,
-                        "creation_date": "2026-10-06",
-                        "last_modified_date": "2026-10-06"
-                    }
-                }
-            ]
-        },
-        {
-            "question_id": 6,
-            "topic": "Aggregate Method in Amortized Analysis",
-            "difficulty": "hard",
-            "sources": [
-                {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "Amortized Analysis - Example",
-                    "score": 0.7797842753062098,
-                    "metadata": {
-                        "page_label": "102",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "Amortized Analysis - Example",
-                    "score": 0.7790509462356567,
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
+                    "difficulty": "medium",
+                    "text": "DECISION TREE · IN PRACTICE\nWhere It's Used — and Its Trade-offs\nAPPLICATIONS\nCredit scoring rules · Medical triage / diagnosis checklists · Customer-churn flagging · Simple fraud-alert rules · Any setting where a human must read and \napprove the model's logic\nMERITS\n✓ Fully interpretable — you can read the exact decision path (a “white box” \nmodel)\n✓ No feature scaling or normalisation needed\n✓ Naturally handles both numeric and categorical features\n✓ Cheap and fast to train and to score new records\nDEMERITS\n✗ Prone to overfitting — a fully grown tree can memorise noise\n✗ Unstable: a small change in data can produce a very different tree\n✗ Biased toward features with many distinct values/levels\n✗ Poor at extrapolating beyond the range seen in training (regression)\nSUPERVISED LEARNING 05 / 13",
+                    "score": 0.515305772879892,
                     "metadata": {
-                        "page_label": "102",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "5",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "Amortized Analysis",
-                    "score": 0.7757694125175476,
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
+                    "difficulty": "medium",
+                    "text": "RANDOM FOREST · IN PRACTICE\nWhere It's Used — and Its Trade-offs\nAPPLICATIONS\nFraud & anomaly detection · Satellite / land-cover classification · Feature-importance ranking in genomics · Recommendation pre-filtering · Any tabular \nproblem needing solid accuracy without heavy tuning\nMERITS\n✓ Much lower variance than a single tree — far less prone to overfitting\n✓ Handles high-dimensional, messy, or partially missing data well\n✓ Gives a built-in feature-importance ranking for free\n✓ Trees train independently — easy to parallelise across cores\nDEMERITS\n✗ Loses the single-tree's easy interpretability — harder to explain a \nprediction\n✗ Slower to train and to score than one tree (hundreds of trees)\n✗ Larger memory footprint to store the whole ensemble\n✗ Can still overfit if trees are grown too deep on noisy labels\nSUPERVISED LEARNING 08 / 13",
+                    "score": 0.5103337320784849,
                     "metadata": {
-                        "page_label": "101",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "8",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "Amortized Analysis",
-                    "score": 0.7734922170639038,
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
+                    "difficulty": "medium",
+                    "text": "SIDE BY SIDE\nHow the Three Models Compare\nAspect Decision Tree Random Forest K-Means Clustering\nLearning type Supervised Supervised Unsupervised\nCore mechanism Splits on the feature that gains the most \ninformation Bags many trees and lets them vote / average Assigns points to the nearest of k centroids\nPrimarily optimizes Information gain per split Variance (via averaging) Within-cluster sum of squares\nInterpretability High — readable rules Medium — needs importance plots Medium — visualize clusters, inspect centroids\nTraining speed Fast Moderate, parallelisable Fast, but repeats over all points each iteration\nKey risk High if unpruned Lower, self-averaging Sensitive to k and to starting centroids\nRule of thumb: start with a single tree to understand the data, move to a Random Forest for a robust supervised baseline, and reach for K-Means when you have no labels and want \nto discover structure in the data itself.\nSUPERVISED & UNSUPERVISED LEARNING 12 / 13",
+                    "score": 0.4710581302642822,
                     "metadata": {
-                        "page_label": "101",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "12",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "0\nCounter value [7] [6] [5] [4] [3] [2] [1] [0] Incre. cost Total cost\n0 0 0 0 1 0 1\n0 0 0 0 1 0 1\n0 0 0 0 0 1 1 0\n0 0 0 0 1\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1\n0 0 0 0 0 1 0 0\n0 0 0 0 0 1 1\n0 0 0 0 0 0 0\n0 0 0 0 0 0 1\n0 0 0 0 0 0 0\n9\n10\n6\n7\n8\n3\n4\n5\n0\n1\n2\n1\n2\n2\n1\n4\n1\n3\n1\n1\n2\n16\n18\n10\n11\n15\n4\n7\n8\n1\n3\n0 0 0 0 1 0 111 1 19\n0\n0\n1\n10\n0\n110\n0\n1\n0\nAmortized Analysis - Example",
-                    "score": 0.7166101932525635,
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
+                    "difficulty": "medium",
+                    "text": "KEY TAKEAWAYS\nIt's a Trade-off, Not a Ranking\n1 Decision Tree\nThe building block. Fast and fully interpretable, but a single tree is unstable and overfits easily on its own.\n2 Random Forest\nTrades a little interpretability for stability — bagging many independent trees averages away their individual noise.\n3 K-Means Clustering\nA different kind of tool entirely — no labels needed, just groups points by proximity to find structure you didn't know to look for.\nChoose based on what the problem needs most: a readable rule, a stable baseline, or hidden structure in unlabeled data.",
+                    "score": 0.4615857326039243,
                     "metadata": {
-                        "page_label": "108",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
+                        "page_label": "13",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 },
                 {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "0\nCounter value [7] [6] [5] [4] [3] [2] [1] [0] Incre. cost Total cost\n0 0 0 0 1 0 1\n0 0 0 0 1 0 1\n0 0 0 0 0 1 1 0\n0 0 0 0 1\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1\n0 0 0 0 0 1 0 0\n0 0 0 0 0 1 1\n0 0 0 0 0 0 0\n0 0 0 0 0 0 1\n0 0 0 0 0 0 0\n9\n10\n6\n7\n8\n3\n4\n5\n0\n1\n2\n1\n2\n2\n1\n4\n1\n3\n1\n1\n2\n16\n18\n10\n11\n15\n4\n7\n8\n1\n3\n0 0 0 0 1 0 111 1 19\n0\n0\n1\n10\n0\n110\n0\n1\n0\nAmortized Analysis - Example",
-                    "score": 0.7144298979300212,
+                    "question_id": 2,
+                    "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
+                    "difficulty": "medium",
+                    "text": "A HANDS-ON WALKTHROUGH\nDecision Trees, Random Forests\n& K-Means Clustering\nThree foundational machine learning models, explained the way they actually work — with the \nmath worked out by hand.\nDT\nDecision Tree\nRF\nRandom Forest\nKM\nK-Means Clustering\nModel Mechanics  ·  Worked Calculations  ·  Real-World Applications  ·  Trade-offs",
+                    "score": 0.43110323362927305,
                     "metadata": {
-                        "page_label": "108",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
+                        "page_label": "1",
+                        "file_name": "Decision_Tree_Random_Forest_KMeans.pdf",
+                        "file_path": "data\\Decision_Tree_Random_Forest_KMeans.pdf",
                         "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "AMORTIZED ANALYSIS",
-                    "score": 0.696382999420166,
-                    "metadata": {
-                        "page_label": "99",
-                        "file_name": "80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\80e7cd94a16c_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
-                    }
-                },
-                {
-                    "question_id": 6,
-                    "topic": "Aggregate Method in Amortized Analysis",
-                    "difficulty": "hard",
-                    "text": "AMORTIZED ANALYSIS",
-                    "score": 0.6933793242799845,
-                    "metadata": {
-                        "page_label": "99",
-                        "file_name": "691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_path": "C:\\Users\\LENOVO\\Desktop\\uhmmm\\Project\\Quizora\\data\\691a7c1fa052_ADA - Unit-2.pdf",
-                        "file_type": "application/pdf",
-                        "file_size": 5602529,
-                        "creation_date": "2026-10-04",
-                        "last_modified_date": "2026-10-04"
+                        "file_size": 237484,
+                        "creation_date": "2026-08-24",
+                        "last_modified_date": "2026-08-29"
                     }
                 }
             ]

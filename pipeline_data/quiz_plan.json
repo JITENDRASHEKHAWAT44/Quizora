@@ -1,57 +1,51 @@
 {
-    "total_questions": 6,
+    "total_questions": 2,
     "difficulty_distribution": {
-        "easy": 2,
-        "medium": 3,
-        "hard": 1
+        "easy": 1,
+        "medium": 1,
+        "hard": 0
     },
     "topic_distribution": [
         {
-            "topic": "Aggregate Method in Amortized Analysis",
+            "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
             "importance": "high",
-            "raw_count": 0.9,
+            "raw_count": 0.3333333333333333,
             "question_count": 1
         },
         {
-            "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
+            "topic": "Overfitting and Pruning in Decision Trees",
             "importance": "high",
-            "raw_count": 0.9,
+            "raw_count": 0.3333333333333333,
             "question_count": 1
         },
         {
-            "topic": "Growth‑Rate Comparison of Algorithms",
+            "topic": "Random Forest Ensemble Mechanics",
             "importance": "high",
-            "raw_count": 0.9,
-            "question_count": 1
-        },
-        {
-            "topic": "Time‑Complexity of Simple Loop Constructs",
-            "importance": "high",
-            "raw_count": 0.9,
-            "question_count": 1
-        },
-        {
-            "topic": "Potential Method for Amortized Analysis",
-            "importance": "medium",
-            "raw_count": 0.6,
-            "question_count": 1
-        },
-        {
-            "topic": "Summation Formulas for Time‑Complexity Analysis",
-            "importance": "medium",
-            "raw_count": 0.6,
-            "question_count": 1
-        },
-        {
-            "topic": "Solving Recurrences by the Iteration (Expansion) Method",
-            "importance": "medium",
-            "raw_count": 0.6,
+            "raw_count": 0.3333333333333333,
             "question_count": 0
         },
         {
-            "topic": "Master Theorem for Divide‑and‑Conquer Recurrences",
+            "topic": "K‑Means Clustering Objective and Convergence (Lloyd’s Algorithm)",
+            "importance": "high",
+            "raw_count": 0.3333333333333333,
+            "question_count": 0
+        },
+        {
+            "topic": "Feature‑Importance Ranking in Random Forests",
             "importance": "medium",
-            "raw_count": 0.6,
+            "raw_count": 0.2222222222222222,
+            "question_count": 0
+        },
+        {
+            "topic": "Initialization Sensitivity and Choosing k in K‑Means",
+            "importance": "medium",
+            "raw_count": 0.2222222222222222,
+            "question_count": 0
+        },
+        {
+            "topic": "Model Trade‑offs: Interpretability vs. Accuracy vs. Stability",
+            "importance": "medium",
+            "raw_count": 0.2222222222222222,
             "question_count": 0
         }
     ],
@@ -59,38 +53,17 @@
         "easy": [
             {
                 "question_id": 1,
-                "topic": "Aggregate Method in Amortized Analysis",
-                "difficulty": "easy"
-            },
-            {
-                "question_id": 2,
-                "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
+                "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                 "difficulty": "easy"
             }
         ],
         "medium": [
             {
-                "question_id": 3,
-                "topic": "Aggregate Method in Amortized Analysis",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 4,
-                "topic": "Asymptotic Notations (Big‑O, Θ, Ω)",
-                "difficulty": "medium"
-            },
-            {
-                "question_id": 5,
-                "topic": "Growth‑Rate Comparison of Algorithms",
+                "question_id": 2,
+                "topic": "Decision Tree Splitting Criterion (Entropy & Information Gain)",
                 "difficulty": "medium"
             }
         ],
-        "hard": [
-            {
-                "question_id": 6,
-                "topic": "Aggregate Method in Amortized Analysis",
-                "difficulty": "hard"
-            }
-        ]
+        "hard": []
     }
 }
