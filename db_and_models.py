@@ -6,47 +6,31 @@ load_dotenv()
 
 def get_embedding_model():
     """
-    Returns (embed_model, embed_dim, table_name).
-    Prefers Google Gemini API embeddings (35 MB RAM, ultra-lightweight for cloud hosts like Render)
-    and falls back to local HuggingFace Qwen (requires PyTorch, ~1.5 GB RAM).
+    Always uses HuggingFace sentence-transformers/all-MiniLM-L6-v2.
+    ~90 MB RAM — well within Render's 512 MB free tier.
+    embed_dim = 384, table = minilm_pdf_chunks.
     """
-    google_key = os.getenv("GOOGLE_API_KEY")
-    if google_key:
-        try:
-            from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
-            print("Using Google Gemini Embeddings (lightweight, cloud-optimized)...")
-            return (
-                GoogleGenAIEmbedding(
-                    model_name="models/text-embedding-004",
-                    api_key=google_key,
-                ),
-                768,
-                "gemini_pdf_chunks",
-            )
-        except Exception as e:
-            print(f"Gemini embedding init error, falling back to HuggingFace: {e}")
-
     try:
         import torch
         device = "cuda" if torch.cuda.is_available() else "cpu"
     except Exception:
         device = "cpu"
 
-    print(f"Using HuggingFace Qwen embeddings on device '{device}'...")
+    print(f"Using HuggingFace MiniLM embeddings on device '{device}'...")
     from llama_index.embeddings.huggingface import HuggingFaceEmbedding
     return (
         HuggingFaceEmbedding(
-            model_name="Qwen/Qwen3-Embedding-0.6B",
-            trust_remote_code=True,
+            model_name="sentence-transformers/all-MiniLM-L6-v2",
             device=device,
-            embed_batch_size=8,
+            embed_batch_size=32,
         ),
-        1024,
-        "QWEN_pdf_chunks",
+        384,
+        "minilm_pdf_chunks",
     )
 
 
-def get_vector_store(table_name="gemini_pdf_chunks", embed_dim=768):
+
+def get_vector_store(table_name="minilm_pdf_chunks", embed_dim=384):
     """
     Connects to Supabase PostgreSQL if DATABASE_URL is set, otherwise falls back to local PostgreSQL.
     """

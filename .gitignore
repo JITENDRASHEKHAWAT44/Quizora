@@ -2,3 +2,8 @@
 data
 output
 RAG
+__pycache__/
+*.pyc
+*.json
+!frontend/*.json
+

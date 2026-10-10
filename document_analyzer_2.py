@@ -4,17 +4,13 @@ import json
 from dotenv import load_dotenv
 
 from llama_index.core import Settings
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.vector_stores.postgres import PGVectorStore
 from llama_index.core import VectorStoreIndex
 
-from llama_index.llms.groq import Groq
+from groq_client import groq_complete
 
 
 load_dotenv()
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
-
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 
 def analyze_document():
@@ -27,20 +23,12 @@ def analyze_document():
     embed_model, embed_dim, table_name = get_embedding_model()
     Settings.embed_model = embed_model
 
-    llm = Groq(
-        model="openai/gpt-oss-120b",
-        api_key=GROQ_API_KEY,
-    )
-
-    Settings.llm = llm
-
     vector_store = get_vector_store(table_name=table_name, embed_dim=embed_dim)
-
-
 
     index = VectorStoreIndex.from_vector_store(
         vector_store=vector_store
     )
+
 
     retriever = index.as_retriever(
         similarity_top_k=15
@@ -131,7 +119,7 @@ DOCUMENT MATERIAL:
 ------------------
 """
 
-    response = llm.complete(prompt)
+    response = groq_complete(prompt)
     raw_output = response.text.strip()
 
     # Robust JSON extraction

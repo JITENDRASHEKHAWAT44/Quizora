@@ -2,7 +2,7 @@ import os
 import json
 
 from dotenv import load_dotenv
-from llama_index.llms.groq import Groq
+from groq_client import groq_complete
 
 from schema import MCQTest
 
@@ -17,16 +17,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY is missing from .env")
-
-
-# ==========================================
-# 2. Configure Groq
-# ==========================================
-
-llm = Groq(
-    model="openai/gpt-oss-120b",
-    api_key=GROQ_API_KEY,
-)
 
 
 # ==========================================
@@ -176,7 +166,7 @@ Return ONLY valid JSON matching this exact format:
         f"questions to Groq..."
     )
 
-    response = llm.complete(prompt)
+    response = groq_complete(prompt)
     raw_output = response.text.strip()
 
     # Robust JSON extraction

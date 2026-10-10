@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 from dotenv import load_dotenv
-from llama_index.llms.groq import Groq
+from groq_client import groq_complete
 
 from schema import MCQTest
 
@@ -35,16 +35,6 @@ MAX_SOURCE_CHARS = 5000
 
 # Number of questions checked per Groq request
 VALIDATION_BATCH_SIZE = 5
-
-
-# ==========================================
-# 2. Groq
-# ==========================================
-
-llm = Groq(
-    model="openai/gpt-oss-120b",
-    api_key=GROQ_API_KEY,
-)
 
 
 # ==========================================
@@ -151,7 +141,7 @@ Return ONLY valid JSON:
 """
 
 
-    response = llm.complete(
+    response = groq_complete(
         prompt
     )
 
@@ -285,7 +275,7 @@ IMPORTANT:
         f"questions to Groq..."
     )
 
-    response = llm.complete(
+    response = groq_complete(
         prompt
     )
 
@@ -444,7 +434,7 @@ Return ONLY valid JSON matching this format:
 }}
 """
 
-    response = llm.complete(
+    response = groq_complete(
         prompt
     )
 
