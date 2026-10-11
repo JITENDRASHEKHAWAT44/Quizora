@@ -4,8 +4,6 @@ import json
 from dotenv import load_dotenv
 
 from llama_index.core import Settings, VectorStoreIndex
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.vector_stores.postgres import PGVectorStore
 
 
 load_dotenv()
