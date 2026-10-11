@@ -58,17 +58,31 @@ def get_vector_store(table_name="minilm_pdf_chunks", embed_dim=384):
 
     db_url = os.getenv("DATABASE_URL")
     if db_url:
-        from urllib.parse import urlparse, unquote
-        u = urlparse(db_url)
-        return PGVectorStore.from_params(
-            database=u.path.lstrip("/"),
-            host=u.hostname,
-            password=unquote(u.password) if u.password else None,
-            port=u.port or 5432,
-            user=unquote(u.username) if u.username else None,
-            table_name=table_name,
-            embed_dim=embed_dim,
+        import re
+        from urllib.parse import unquote
+
+        # Match postgresql://user:password@host:port/database robustly
+        m = re.match(
+            r"^postgres(?:ql)?://(?:(?P<user>[^:]+)(?::(?P<password>.*))?@)?(?P<host>[^:/]+)(?::(?P<port>\d+))?/(?P<database>[^?]+)",
+            db_url.strip(),
         )
+        if m:
+            gd = m.groupdict()
+            raw_pwd = gd.get("password") or ""
+            # Strip accidental surrounding brackets [password] if user entered them literally
+            if raw_pwd.startswith("[") and raw_pwd.endswith("]"):
+                raw_pwd = raw_pwd[1:-1]
+
+            return PGVectorStore.from_params(
+                database=gd.get("database") or "postgres",
+                host=gd.get("host"),
+                password=unquote(raw_pwd) if raw_pwd else None,
+                port=int(gd.get("port") or 5432),
+                user=unquote(gd.get("user") or "postgres"),
+                table_name=table_name,
+                embed_dim=embed_dim,
+            )
+
 
 
     return PGVectorStore.from_params(
