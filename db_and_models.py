@@ -6,10 +6,28 @@ load_dotenv()
 
 def get_embedding_model():
     """
-    Always uses HuggingFace sentence-transformers/all-MiniLM-L6-v2.
-    ~90 MB RAM — well within Render's 512 MB free tier.
-    embed_dim = 384, table = minilm_pdf_chunks.
+    Returns (embed_model, embed_dim, table_name).
+    Prefers Jina AI Embeddings API (zero local RAM, 100% cloud-optimized for 512 MB Render limit).
+    Falls back to local HuggingFace MiniLM-L6-v2 if JINA_API_KEY is not set.
     """
+    jina_key = os.getenv("JINA_API_KEY")
+    if jina_key:
+        try:
+            from llama_index.embeddings.jinaai import JinaEmbedding
+            print("Using Jina AI Embeddings (API-based, zero local RAM, cloud-optimized)...")
+            return (
+                JinaEmbedding(
+                    api_key=jina_key,
+                    model="jina-embeddings-v3",
+                    task="retrieval.passage",
+                    dimensions=1024,
+                ),
+                1024,
+                "jina_pdf_chunks",
+            )
+        except Exception as e:
+            print(f"Jina AI initialization failed: {e}. Falling back to HuggingFace...")
+
     try:
         import torch
         torch.set_num_threads(1)
@@ -28,6 +46,7 @@ def get_embedding_model():
         384,
         "minilm_pdf_chunks",
     )
+
 
 
 

@@ -5,6 +5,7 @@ sentence-transformers
 
 # LlamaIndex
 llama-index-core
+llama-index-embeddings-jinaai
 llama-index-embeddings-huggingface
 llama-index-vector-stores-postgres
 llama-index-readers-file
