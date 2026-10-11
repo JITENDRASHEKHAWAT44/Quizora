@@ -9,7 +9,6 @@ from llama_index.vector_stores.postgres import PGVectorStore
 
 
 load_dotenv()
-os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
 # ==========================================
 # Lazy singleton — model loads once on

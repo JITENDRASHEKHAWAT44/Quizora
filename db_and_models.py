@@ -12,6 +12,7 @@ def get_embedding_model():
     """
     try:
         import torch
+        torch.set_num_threads(1)
         device = "cuda" if torch.cuda.is_available() else "cpu"
     except Exception:
         device = "cpu"
@@ -38,17 +39,18 @@ def get_vector_store(table_name="minilm_pdf_chunks", embed_dim=384):
 
     db_url = os.getenv("DATABASE_URL")
     if db_url:
-        from urllib.parse import urlparse
+        from urllib.parse import urlparse, unquote
         u = urlparse(db_url)
         return PGVectorStore.from_params(
             database=u.path.lstrip("/"),
             host=u.hostname,
-            password=u.password,
+            password=unquote(u.password) if u.password else None,
             port=u.port or 5432,
-            user=u.username,
+            user=unquote(u.username) if u.username else None,
             table_name=table_name,
             embed_dim=embed_dim,
         )
+
 
     return PGVectorStore.from_params(
         database="quizora",

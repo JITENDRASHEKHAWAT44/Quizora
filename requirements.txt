@@ -1,19 +1,21 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+transformers
+sentence-transformers
+
 # LlamaIndex
-llama-index
-llama-index-llms-groq
-llama-index-embeddings-google-genai
+llama-index-core
 llama-index-embeddings-huggingface
-# LLM / Embeddings
+llama-index-vector-stores-postgres
+llama-index-readers-file
+
+# LLM
 groq
-google-genai
 
 # Structured Output
 pydantic
 
-sentence-transformers
-torch
-transformers
-# PDF
+# PDF Processing & Generation
 pypdf
 reportlab
 
@@ -22,11 +24,9 @@ python-dotenv
 
 # Backend
 fastapi
-uvicorn
+uvicorn[standard]
 python-multipart
 
-# Frontend
-streamlit
-
 # Database
-psycopg[binary]
+psycopg2-binary
+asyncpg

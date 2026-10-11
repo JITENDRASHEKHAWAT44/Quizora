@@ -10,7 +10,6 @@ from groq_client import groq_complete
 
 
 load_dotenv()
-os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
 
 def analyze_document():
